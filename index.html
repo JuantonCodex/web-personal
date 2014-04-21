@@ -9,7 +9,7 @@
   <body>
     <header id="header">
       <div class="header-inner">
-        <div id="logo"><img src="img/logo.png"></div>
+        <div id="logo"><a href="index.html"><img src="img/logo.png"></a></div>
         <nav id="nav">
           <div class="arrow icon-f-arriba"></div>
           <ul>
@@ -23,7 +23,12 @@
     </header>
     <div id="main">
       <div class="main-inner">
-        <div id="slide"><img src="photos/home/slide-1.jpg"></div>
+        <div id="slide">
+          <ul class="rslides">
+            <li><img src="photos/home/slide-1.jpg"></li>
+            <li><img src="photos/home/slide-1.jpg"></li>
+          </ul>
+        </div>
         <section id="clientes">
           <h1>Proyectos para empresas como :</h1>
           <div class="cliente"><img src="photos/home/logo-kia.png" alt="Kia"></div>
@@ -36,11 +41,32 @@
       </div>
     </div>
     <footer id="footer">
-      <div class="acerca-demi"></div>
-      <div class="enlaces"></div>
-      <div class="tweets"></div>
-      <div class="copyright"></div>
+      <div class="footer-inner">
+        <div class="acerca-demi">
+          <h2>Algo de mi</h2>
+          <p>Me llamo Juan, me gusta todo lo que es tecnología y cómo éstas pueden dar solución a nuestras necesidades tanto en un entorno virtual como real.</p>
+          <p>Además me apasionan las artes marciales y explorar el desarrollo que podemos alcanzar físicamente, se me hace muy interesante ir rompiendo nuestros propios límites.</p>
+        </div>
+        <div class="enlaces">
+          <h2>Links</h2>
+          <ul>
+            <li class="link-github"><span class="icon icon-github"></span> Revisa mi código en <a href="https://github.com/jcahuana" target="_blank">Github</a></li>
+            <li class="link-twitter"><span class="icon icon-twitter"></span> Sígueme en <a href="https://twitter.com/jcahuana" target="_blank">Twitter</a></li>
+            <li class="link-behance"><span class="icon icon-behance"></span> Dale un vistazo a mis trabajos en <a href="http://www.behance.net/jcahuana" target="_blank">Behance</a></li>
+            <li class="link-youtube"><span class="icon icon-youtube"></span> Mi canal de <a href="https://www.youtube.com/user/flashadictos" target="_blank">Youtube</a></li>
+          </ul>
+        </div>
+        <div class="tweets">
+          <h2>Tweets</h2>
+          <div id="box-tweets"></div>
+        </div>
+        <div class="copyright">
+          <p class="detalle">© 2014 Juan Cahuana</p>
+          <p class="celular"><span class="icon icon-mobile"></span> cel: 958516052</p>
+          <p class="email"><span class="icon icon-mail"></span> e-mail: <a href="mailto:jcahuanam@gmail.com">jcahuanam@gmail.com</a></p>
+        </div>
+      </div>
     </footer>
   </body>
-  <script src="js/main.min.js"></script>
+  <script src="js/home.min.js"></script>
 </html>
