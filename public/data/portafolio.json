@@ -1,0 +1,153 @@
+{
+	"Juego Pedalea":{
+		"categoria":"Game App",
+		"img_portada":"photos/portafolio/kia-juegopedalea-portada.jpg",
+		"estado": "progress",
+		"img_slide":[
+			"photos/portafolio/slide-1.jpg",
+			"photos/portafolio/slide-1.jpg",
+			"photos/portafolio/slide-1.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.</p><p>En la primera sección el sitio web muestra la oferta del auto y la actividad en redes sociales como Twitter y Facebook.</p><p>En la segunda sección el sitio web te da a escoger tres videos(la temática es sobre deportes de aventura) que te invitan a participar mediante una pregunta, si la respuesta es afirmativa el sitio web se conecta a la API de facebook para registrar la usuario y luego te da la posibilidad de publicar una imagen en nuestros muros.</p><p>Cada vez que el usuario contesta de manera afirmativa laspreguntas en cada video, una mensahe y una imagen del video respectivo es publicado en su muro de facebook.</p>",
+			"compatibilidad":"IE8+ / Chrome / Firefox.",
+			"tecnologias": "HTML5 - MySQL - Facebook API."
+		}
+	},
+	"Fiat Punto":{
+		"categoria":"Facebook App",
+		"img_portada":"photos/portafolio/fiat-punto-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/fiat-punto-slide-1.jpg",
+			"photos/portafolio/fiat-punto-slide-2.jpg",
+			"photos/portafolio/fiat-punto-slide-3.jpg",
+			"photos/portafolio/fiat-punto-slide-4.jpg",
+			"photos/portafolio/fiat-punto-slide-5.jpg",
+			"photos/portafolio/fiat-punto-slide-6.jpg",
+			"photos/portafolio/fiat-punto-slide-7.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Aplicación para Fiat Perú.</p><p>La aplicación solicita una cantidad de permisos para poder calcular con cúal de tus amigos tienes mayor actividad según la cantidad de lugares compartidos. El resultado se muestra en una imagen indicando los tres últimos lugares compartidos y te da la opción de poder publicarla en el muro e ingresas al sorteo de unos premios propuestos.</p><p>La aplicación registra los datos los usuarios y la cantidad de imágenes compartidas. Estos datos luego se pueden descargar en un documento excel.</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
+		}
+	},
+	"Recetario Cartavio":{
+		"categoria":"Mobile App",
+		"img_portada":"photos/portafolio/cartavio-recetario-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/cartavio-recetario-slide-1.jpg",
+			"photos/portafolio/cartavio-recetario-slide-2.jpg",
+			"photos/portafolio/cartavio-recetario-slide-3.jpg",
+			"photos/portafolio/cartavio-recetario-slide-4.jpg",
+			"photos/portafolio/cartavio-recetario-slide-5.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Áplicación móvil responsive para Ron Cartavio.</p><p>En la página inicial se muestra los productos destacados y se puede ingresar a cada uno de ellos para ver sus descripciones.</p><p>En la segunda sección se muestra una gran variedad de recetas, al ingresar a cualquiera de ellas para ver la preparación, nos da la posibilidad de darle 'like' y ésta se publica en el muro.</p><p>Las otras dos secciones son de historia de la empresa y de los lugares promocionados donde se puede adquirir el producto.</p><p>La aplicación registra los datos los usuarios que le dieron 'like' a alguna receta. Estos datos luego se pueden descargar en un documento excel.</p>",
+			"compatibilidad":"Android - IOS.",
+			"tecnologias": "HTML5 - Phonegap - Facebook API - PHP - MySQL."
+		}
+	},
+	"New Kia Cerato 2014":{
+		"categoria":"Web Site",
+		"img_portada":"photos/portafolio/kia-cerato2014-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/kia-cerato2014-slide-1.jpg",
+			"photos/portafolio/kia-cerato2014-slide-2.jpg",
+			"photos/portafolio/kia-cerato2014-slide-3.jpg",
+			"photos/portafolio/kia-cerato2014-slide-4.jpg",
+			"photos/portafolio/kia-cerato2014-slide-5.jpg",
+			"photos/portafolio/kia-cerato2014-slide-6.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.</p><p>En la primera sección el sitio web muestra la oferta del auto y la actividad en redes sociales como Twitter y Facebook.</p><p>En la segunda sección el sitio web te da a escoger tres videos(la temática es sobre deportes de aventura) que te invitan a participar mediante una pregunta, si la respuesta es afirmativa el sitio web se conecta a la API de facebook para registrar al usuario y luego te da la posibilidad de publicar una imagen en el muro.</p><p>La aplicación registra los datos de cada usuario, la cantidad de imágenes generadas y publicadas en los muros. Todos estos datos luego se pueden descargar en un documento excel.</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
+		}
+	},
+	"Verano no es verano":{
+		"categoria":"Facebook App",
+		"img_portada":"photos/portafolio/kia-veranosinkia-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/kia-veranosinkia-slide-1.jpg",
+			"photos/portafolio/kia-veranosinkia-slide-2.jpg",
+			"photos/portafolio/kia-veranosinkia-slide-3.jpg",
+			"photos/portafolio/kia-veranosinkia-slide-4.jpg",
+			"photos/portafolio/kia-veranosinkia-slide-5.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Aplicación para Kia Perú.</p><p>La aplicación te permite ingresar un texto para completar una frase propuesta. Luego con la frase completa se genera una imagen que será publicada es nuestros muros. Todos los usuarios que participen entran al sorteo de una serie de premios que se darán al final de la campaña.</p><p>La aplicación registra los datos de cada usuario, la cantidad de imágenes generadas y publicadas. Todos estos datos luego se pueden descargar en un documento excel.</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
+		}
+	},
+	"Un Día":{
+		"categoria":"Facebook App",
+		"img_portada":"photos/portafolio/miamont-undia-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/miamont-undia-slide-1.jpg",
+			"photos/portafolio/miamont-undia-slide-2.jpg",
+			"photos/portafolio/miamont-undia-slide-3.jpg",
+			"photos/portafolio/miamont-undia-slide-4.jpg",
+			"photos/portafolio/miamont-undia-slide-5.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Aplicación para Mia Mont.</p><p>La aplicación en la primera sección promociona una de las canciones de la cantante, da posibilidad de dejar comentarios de los fans, descargar la canción y compartirla en nuestro muro. En la segunda sección se puede dedicar una imagen a cualquiera de nuestros amigos, ésta imagen además se puede personalizar con un mensaje. En la última sección se puede visualizar los premios por haber usado la aplicación.</p><p>La aplicación registra los datos de cada usuario, las descargas de la canción, las veces que se realizarón la acción de compartir y quiénes dedicaron una imagen. Todos estos datos luego se pueden descargar en un documento excel.</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
+		}
+	},
+	"Modelos Toyota":{
+		"categoria":"Facebook App",
+		"img_portada":"photos/portafolio/toyota-modelos-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/toyota-modelos-slide-1.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Aplicación para Toyota Perú.</p><p>La aplicación es una galería de todos los modelos de autos y camionetas con las que cuenta la marca. Con una sección de modelos destacados en la parte superior</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "HTML5 - Facebook API - PHP."
+		}
+	},
+	"Momentos Vizzio":{
+		"categoria":"Facebook App",
+		"img_portada":"photos/portafolio/vizzio-momentosvizzio-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/vizzio-momentosvizzio-slide-1.jpg",
+			"photos/portafolio/vizzio-momentosvizzio-slide-2.jpg",
+			"photos/portafolio/vizzio-momentosvizzio-slide-3.jpg",
+			"photos/portafolio/vizzio-momentosvizzio-slide-4.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Aplicación para Vizzio donde puedes armar una imagen a tu gusto para luego publicarla en tu muro.</p><p>La aplicación te permite escoger una imagen, agregar texto y seleccionar una versión del logo de Vizzio. Mientras se arma la imagen se puede previsualizar cómo va quedando.</p><p>La aplicación registra los datos de cada usuario en una base de datos, que luego se puede descargar en un documento excel.</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
+		}
+	},
+	"Eres Rock o Pop":{
+		"categoria":"Facebook App",
+		"img_portada":"photos/portafolio/guarana-rockpop-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/guarana-rockpop-slide-1.jpg",
+			"photos/portafolio/guarana-rockpop-slide-2.jpg",
+			"photos/portafolio/guarana-rockpop-slide-3.jpg",
+			"photos/portafolio/guarana-rockpop-slide-4.jpg",
+			"photos/portafolio/guarana-rockpop-slide-5.jpg",
+			"photos/portafolio/guarana-rockpop-slide-6.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Aplicación para Guaraná que promociona tres vídeos semana tras semana para que los usuarios voten por ellos mediante 'Likes'.</p><p>El vídeo más votado de cada semana aparece cada viernes en un canal de televisión.</p><p>Cuando se usa por primera vez la aplicación, ésta te regala un código para un mes de suscripción a sonora.</p><p>La aplicación registra los datos de cada usuario en una base de datos, que luego se puede descargar en un documento excel.</p>",
+			"compatibilidad":"IE8+ - Chrome - Firefox.",
+			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
+		}
+	}
+	
+}

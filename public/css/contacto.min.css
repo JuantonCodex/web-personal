@@ -1,0 +1,124 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+a{background:0 0}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:700}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+,button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}
+input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+@font-face{font-family:icomoon;src:url(../fonts/icomoon/icomoon.eot?rxw7dn);src:url(../fonts/icomoon/icomoon.eot?#iefixrxw7dn) format('embedded-opentype'),url(../fonts/icomoon/icomoon.woff?rxw7dn) format('woff'),url(../fonts/icomoon/icomoon.ttf?rxw7dn) format('truetype'),url(../fonts/icomoon/icomoon.svg?rxw7dn#icomoon) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:icomoon-portafolio;src:url(../fonts/icomoon-portafolio/icomoon.eot?jbqx5c);src:url(../fonts/icomoon-portafolio/icomoon.eot?#iefixjbqx5c) format('embedded-opentype'),url(../fonts/icomoon-portafolio/icomoon.woff?jbqx5c) format('woff'),url(../fonts/icomoon-portafolio/icomoon.ttf?jbqx5c) format('truetype'),url(../fonts/icomoon-portafolio/icomoon.svg?jbqx5c#icomoon-portafolio) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:bitterregular;src:url(../fonts/Bitter-Regular/Bitter-Regular.eot);src:url(../fonts/Bitter-Regular/Bitter-Regular.eot) format('embedded-opentype'),url(../fonts/Bitter-Regular/Bitter-Regular.woff) format('woff'),url(../fonts/Bitter-Regular/Bitter-Regular.ttf) format('truetype'),url(../fonts/Bitter-Regular/Bitter-Regular.svg#bitterregular) format('svg')}
+@font-face{font-family:bitteritalic;src:url(../fonts/bitter-italic/bitter-italic-webfont.eot);src:url(../fonts/bitter-italic/bitter-italic-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/bitter-italic/bitter-italic-webfont.woff) format('woff'),url(../fonts/bitter-italic/bitter-italic-webfont.ttf) format('truetype'),url(../fonts/bitter-italic/bitter-italic-webfont.svg#bitteritalic) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:titillium_webregular;src:url(../fonts/titilliumweb-regular/titilliumweb-regular-webfont.eot);src:url(../fonts/titilliumweb-regular/titilliumweb-regular-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/titilliumweb-regular/titilliumweb-regular-webfont.woff) format('woff'),url(../fonts/titilliumweb-regular/titilliumweb-regular-webfont.ttf) format('truetype'),url(../fonts/titilliumweb-regular/titilliumweb-regular-webfont.svg#titillium_webregular) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:titillium_websemibold;src:url(../fonts/titilliumweb-semibold/titilliumweb-semibold-webfont.eot);src:url(../fonts/titilliumweb-semibold/titilliumweb-semibold-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/titilliumweb-semibold/titilliumweb-semibold-webfont.woff) format('woff'),url(../fonts/titilliumweb-semibold/titilliumweb-semibold-webfont.ttf) format('truetype'),url(../fonts/titilliumweb-semibold/titilliumweb-semibold-webfont.svg#titillium_websemibold) format('svg');font-weight:400;font-style:normal}
+img{display:block;border:0}
+*{outline:0}
+[class*=" icon-"],[class^=icon-]{font-family:icomoon;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.icon-menu:before{content:"\e600"}
+.icon-youtube:before{content:"\e601"}
+.icon-mobile:before{content:"\e602"}
+.icon-mail:before{content:"\e603"}
+.icon-arrow-up:before{content:"\e604"}
+.icon-arrow-left:before{content:"\e608"}
+.icon-arrow-right:before{content:"\e609"}
+.icon-github:before{content:"\e605"}
+.icon-twitter:before{content:"\e606"}
+.icon-behance:before{content:"\e607"}
+.fullscreen-viewport{height:100%;overflow:hidden;position:absolute;width:100%}
+@media only screen and (max-width:790px){.fullscreen-viewport{display:none}}
+.fullscreen-viewport .fullscreen{background:transparent url(../img/bg-world.jpg) 0 0 no-repeat;height:110%;width:110%;-webkit-background-size:100%;background-size:100%;position:fixed}
+#outer-wrapper{position:relative;z-index:2;height:100%;width:100%}
+#header{background:transparent url(../img/bg-header.jpg) 0 0 repeat;border-bottom:5px solid #3ea4ff;min-height:85px;padding:0 15px;overflow:hidden}
+@media only screen and (max-width:610px){#header{padding:0}}
+#header .header-inner{margin:0 auto;max-width:1000px}
+#header .header-inner #logo{padding-top:12px;float:left;width:208px}
+@media only screen and (max-width:905px){#header .header-inner #logo{float:none;margin:0 auto}}
+#header .header-inner #btn-menu{background:#3ea4ff;cursor:pointer;display:none;margin-top:15px;height:40px;text-align:center}
+#header .header-inner #btn-menu:before{font:28px icomoon;content:"\e600";line-height:40px}
+@media only screen and (max-width:610px){#header .header-inner #btn-menu{display:block}}
+#header .header-inner #nav{float:right;height:85px;position:relative}
+@media only screen and (max-width:905px){#header .header-inner #nav{margin-top:15px;width:100%}}
+@media only screen and (max-width:610px){#header .header-inner #nav{height:160px;margin:0;overflow:hidden}}
+#header .header-inner #nav .arrow{top:69px;position:absolute;left:0;width:25px;color:#3ea4ff;font-size:25px}
+@media only screen and (max-width:610px){#header .header-inner #nav .arrow{display:none}}
+#header .header-inner #nav ul{list-style:none;height:100%;padding:0;margin:0;overflow:hidden}
+#header .header-inner #nav ul li{display:table;float:left;height:100%;width:160px}
+@media only screen and (max-width:905px){#header .header-inner #nav ul li{width:25%}}
+@media only screen and (max-width:610px){#header .header-inner #nav ul li{float:none;height:40px;width:100%}}
+#header .header-inner #nav ul li.active{background:#bfefff}
+#header .header-inner #nav ul li.active a{color:#0085b2}
+#header .header-inner #nav ul li.active a:hover{background:#bfefff}
+#header .header-inner #nav ul li a{color:#595959;display:table-cell;font:20px bitterregular;height:100%;text-align:center;text-decoration:none;text-transform:uppercase;vertical-align:middle;width:100%}
+#header .header-inner #nav ul li a:hover{color:#0085b2;background:#d7f5ff}
+#footer{background:transparent url(../img/bg-footer.jpg) 0 0 repeat;margin-top:50px;border-top:3px solid #535353}
+#footer .footer-inner{margin:0 auto;overflow:hidden;max-width:1000px;padding:0 15px}
+#footer .footer-inner h2{color:#fff;font:19px bitterregular;margin:30px 0 15px}
+#footer .footer-inner .acerca-demi{float:left;min-height:265px;margin-right:30px;width:435px}
+@media only screen and (max-width:790px){#footer .footer-inner .acerca-demi{min-height:0;padding-bottom:20px;width:100%}}
+#footer .footer-inner .acerca-demi p{color:#ddd;font:16px titillium_webregular;line-height:19px;text-align:justify}
+#footer .footer-inner .enlaces{float:left;min-height:265px;margin-right:25px;width:250px}
+@media only screen and (max-width:790px){#footer .footer-inner .enlaces{min-height:0;padding-bottom:20px}}
+#footer .footer-inner .enlaces ul{list-style:none;padding:0;margin:0}
+#footer .footer-inner .enlaces ul li{color:#ddd;font:16px titillium_webregular;height:23px;line-height:23px;margin-bottom:5px}
+#footer .footer-inner .enlaces ul li span.icon{margin-right:5px}
+#footer .footer-inner .enlaces ul li a{color:#3ea4ff;font-family:titillium_websemibold;text-decoration:none}
+#footer .footer-inner .enlaces ul li a:hover{color:#fd9e00}
+#footer .footer-inner .tweets{float:left;min-height:120px;padding-bottom:20px;width:260px}
+#footer .footer-inner .tweets #twitter-animation{margin-top:5px;float:left;background:transparent url(../img/twitter-flying.png) 0 0 no-repeat;height:38px;width:55px}
+#footer .footer-inner .tweets #cnt-tweet{float:right;width:200px}
+#footer .copyright{background:#373737;padding:0 15px}
+#footer .copyright .copyright-inner{margin:0 auto;max-width:1000px;min-height:45px;overflow:hidden}
+#footer .copyright .copyright-inner p{color:#a5a4a4;font:15px titillium_webregular;margin:0;height:45px;line-height:45px;padding:0}
+#footer .copyright .copyright-inner p.detalle{float:left;margin-right:30px}
+#footer .copyright .copyright-inner p.celular{float:right}
+@media only screen and (max-width:610px){#footer .copyright .copyright-inner p.celular{float:left;margin-right:30px}}
+#footer .copyright .copyright-inner p.celular .icon{display:block;float:left;padding-top:13px;margin-right:3px;font-size:19px}
+#footer .copyright .copyright-inner p.email{float:right;margin-right:30px}
+@media only screen and (max-width:610px){#footer .copyright .copyright-inner p.email{float:left}}
+#footer .copyright .copyright-inner p.email .icon{display:block;float:left;padding-top:13px;margin-right:3px;font-size:20px}
+#footer .copyright .copyright-inner p.email a{color:#a5a4a4;text-decoration:none}
+body{background:#323232}
+#main{padding:0 15px}
+#main .main-inner{margin:0 auto;max-width:1000px;padding:50px 0 0}
+#main .main-inner #contacto{overflow:hidden}
+#main .main-inner #contacto .detalles{float:left;width:55%;margin-right:3%}
+@media only screen and (max-width:610px){#main .main-inner #contacto .detalles{width:100%;float:auto;margin-right:0}}
+#main .main-inner #contacto .detalles h1{color:#d87b72;font:24px bitterregular;margin:0 0 30px}
+#main .main-inner #contacto .detalles p{color:#ddd;font:18px titillium_webregular;margin-top:0}
+#main .main-inner #contacto .detalles ul.medios{list-style:none;margin:0;padding:10px 0 0}
+#main .main-inner #contacto .detalles ul.medios li{background:#696969;border-radius:5px;height:50px;color:#ddd;font:18px titillium_webregular;line-height:50px;max-width:300px;margin:0 auto 15px;text-align:center}
+#main .main-inner #contacto .detalles ul.medios li a{color:#ddd;text-decoration:none}
+#main .main-inner #contacto .icono{float:left;width:42%;margin-bottom:30px}
+#main .main-inner #contacto .icono img{width:100%}
+@media only screen and (max-width:610px){#main .main-inner #contacto .icono{width:100%;float:auto}
+#main .main-inner #contacto .icono img{margin:30px auto 0;width:70%}}
