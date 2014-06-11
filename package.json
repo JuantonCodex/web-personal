@@ -1,0 +1,42 @@
+{
+  "name": "jcahuana_bower",
+  "version": "0.0.0",
+  "description": "Modelo de una página web personal",
+  "main": "sever.js",
+  "dependencies": {
+    "node-static": "^0.7.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "browserify": {
+    "transform": [
+      "debowerify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jcahuana/web-personal.git"
+  },
+  "keywords": [
+    "jcahuana",
+    "frontend"
+  ],
+  "author": "Juan Cahuana <jcahuanam@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jcahuana/web-personal",
+  "devDependencies": {
+    "browserify": "^4.1.8",
+    "debowerify": "^0.7.1",
+    "gulp": "^3.7.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp-changed": "^0.4.0",
+    "gulp-imagemin": "^0.6.0",
+    "gulp-strip-debug": "^0.3.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-minify-html": "^0.1.3",
+    "gulp-stylus": "^1.0.2",
+    "vinyl-source-stream": "^0.1.1",
+    "gulp-streamify": "0.0.5"
+  }
+}

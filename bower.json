@@ -1,0 +1,32 @@
+{
+  "name": "jcahuana_bower",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jcahuana/web-personal",
+  "authors": [
+    "Juan Cahuana <jcahuanam@gmail.com>"
+  ],
+  "description": "Modelo de una página web personal",
+  "main": "server.js",
+  "keywords": [
+    "jcahuana",
+    "frontend"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.0",
+    "backbone": "1.1.2",
+    "handlebars": "2.0.0-alpha.4",
+    "spritely": "0.6.8",
+    "jparallax": "2.0.3",
+    "ResponsiveSlides": "*",
+    "html5shiv": "~3.7.2"
+  }
+}
