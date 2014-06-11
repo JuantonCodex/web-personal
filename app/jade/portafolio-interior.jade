@@ -1,0 +1,67 @@
+!!! 5
+html( lang="es-PE" )
+	head
+		meta( name="viewport", content="initial-scale=1, maximum-scale=1, width=device-width" )
+		title Juan Cahuana - Web Developer - Portafolio Interior
+		meta( charset="utf-8")
+		link( rel="stylesheet", href="css/portafolio.interior.min.css")
+		//if lt IE 8
+		script(src="js/html5shiv.js")
+	body
+		header#header
+			.header-inner
+				div#logo
+					a( href="index.html" ): img( src="img/logo.png" )
+				div#btn-menu
+				nav#nav
+					div.arrow.icon-arrow-up
+					ul
+						li: a( href="index.html") Home
+						li: a( href="perfil.html") Perfil
+						li.active: a( href="portafolio.html") Portafolio
+						li: a( href="contacto.html") Contacto
+		div#main
+			.main-inner
+				section#portafolio
+					div.trabajo
+						div.wrapper-slide
+							div.slide
+								ul.rslides
+									li: img( src="photos/portafolio/slide-1.jpg" )
+									li: img( src="photos/portafolio/slide-1.jpg" )
+						div.descripcion
+							h1 Miralavida
+							p Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.
+							p Se conecta a la API de facebook para registrar la usuario y pueda participar de la interactividad de los videos del sitio.
+							p Cada vez que el usuario contesta de manera afirmativa laspreguntas en cada video, una mensahe y una imagen del video respectivo es publicado en su muro de facebook.
+							p.compatibilidad Compatibilidad:
+							p IE8+, Chrome  y Firefox.
+							p.tecnologia Tecnologìas:
+							p HTML5, MySQL, Facebook API.
+
+		footer#footer
+			.footer-inner
+				.acerca-demi
+						h2 Algo de mi
+						p Me llamo juan Antonio, me apasiona el mundo digital y cómo este puede proveer soluciones a nuestras necesidades, por sobre todo el proceso de implementar esa solución y sus frutos.
+						p Así también disfruto mucho de los deportes de contacto, las artes marciales y cómo a través de ellas exploramos el desarrollo físico que podemos alcanzar. En resumen se me hace muy interesante ir rompiendo nuestros propios límites en cualquier área.
+				.enlaces
+					h2 Links
+					ul
+						li.link-github <span class="icon icon-github"></span> Revisa mi código en <a href="https://github.com/jcahuana" target="_blank">Github</a>
+						li.link-twitter <span class="icon icon-twitter"></span> Sígueme en <a href="https://twitter.com/jcahuana" target="_blank">Twitter</a>
+						li.link-behance <span class="icon icon-behance"></span> Mi portafolio en <a href="http://www.behance.net/jcahuana" target="_blank">Behance</a>
+						li.link-youtube <span class="icon icon-youtube"></span> Mi canal de <a href="https://www.youtube.com/user/flashadictos" target="_blank">Youtube</a>
+				.tweets
+					h2 Tweets
+					div#twitter-animation
+					div#cnt-tweet
+						<a class="twitter-timeline" href="https://twitter.com/JCahuana" data-widget-id="462324739948548096" data-chrome="noheader nofooter noborders" data-tweet-limit="1" lang="ES">Tweets por @JCahuana</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			.copyright
+				.copyright-inner
+					p.detalle © 2014 Juan Cahuana
+					p.celular <span class="icon icon-mobile"></span> cel: 958516052
+					p.email <span class="icon icon-mail"></span> e-mail: <a href="mailto:jcahuanam@gmail.com">jcahuanam@gmail.com</a>
+
+	script( src="js/portafolio.interior.min.js")

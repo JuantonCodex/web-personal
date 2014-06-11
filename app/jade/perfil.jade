@@ -1,0 +1,151 @@
+!!! 5
+html( lang="es-PE" )
+	head
+		meta( name="viewport", content="initial-scale=1, maximum-scale=1, width=device-width" )
+		title Juan Cahuana - Web Developer - Perfil
+		meta( charset="utf-8")
+		link( rel="stylesheet", href="css/perfil.min.css")
+		script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+	body
+		header#header
+			.header-inner
+				div#logo
+					a( href="index.html" ): img( src="img/logo.png" )
+				div#btn-menu
+				nav#nav
+					div.arrow.icon-arrow-up
+					ul
+						li: a( href="index.html") Home
+						li.active: a( href="perfil.html") Perfil
+						li: a( href="portafolio.html") Portafolio
+						li: a( href="contacto.html") Contacto
+		div#main
+			.main-inner
+				section#habilidades.section
+					.perfil-inner
+						h2 Habilidades
+						div.lista-habilidades
+							div.grp-habilidad
+								div.nombre Html 5
+								div.progress: div.progress-bar( style="width: 90%" )
+							div.grp-habilidad
+								div.nombre Jade
+								div.progress: div.progress-bar( style="width: 80%" )
+							div.grp-habilidad
+								div.nombre Css
+								div.progress: div.progress-bar( style="width: 90%" )
+							div.grp-habilidad
+								div.nombre Stylus
+								div.progress: div.progress-bar( style="width: 80%" )
+							div.grp-habilidad
+								div.nombre Javascript
+								div.progress: div.progress-bar( style="width: 70%" )
+							div.grp-habilidad
+								div.nombre Php
+								div.progress: div.progress-bar( style="width: 70%" )
+							div.grp-habilidad
+								div.nombre Facebook SDK (php/js)
+								div.progress: div.progress-bar( style="width: 60%" )
+							div.grp-habilidad
+								div.nombre Phonegap
+								div.progress: div.progress-bar( style="width: 60%" )
+							div.grp-habilidad
+								div.nombre As3
+								div.progress: div.progress-bar( style="width: 30%" )
+				section#experiencia.section
+					.perfil-inner
+						h2 Experiencia
+						div.lista-experiencia
+							div.grp-experiencia
+								div.fecha
+									span 2012-2014
+								div.lugar
+									span.nombre Grupo DPI
+									span: a.url( href="http://www.grupodpi.pe", target="_blank" ) www.grupodpi.pe
+									span.descripcion Agencia Interactiva.
+							div.grp-experiencia
+								div.fecha
+									span 2011-2012
+								div.lugar
+									span.nombre Vértice
+									span: a.url( href="http://www.vertice.pe", target="_blank" ) www.vertice.pe
+									span.descripcion Agencia Interactiva.
+							div.grp-experiencia
+								div.fecha
+									span 2010
+								div.lugar
+									span.nombre Megaworking S.A
+									span: a.url( href="http://www.megaworking.com", target="_blank" ) www.megaworking.com
+									span.descripcion Agencia Interactiva.
+							div.grp-experiencia
+								div.fecha
+									span 2009
+								div.lugar
+									span.nombre Universidad de Lima
+									span: a.url( href="http://www.ulima.edu.pe", target="_blank" ) www.ulima.edu.pe
+									span.descripcion Institución académica.
+				section#educacion.section
+					.perfil-inner
+						h2 Educación
+						div.lista-educacion
+							div.grp-educacion
+								div.fecha
+									span 2014 (En curso)
+								div.lugar
+									span.nombre Curso Profesional de Php con Laravel
+									span: a.url( href="http://www.mejorando.la", target="_blank" ) www.mejorando.la
+									span.descripcion Plataforma Platzi.
+							div.grp-educacion
+								div.fecha
+									span 2013
+								div.lugar
+									span.nombre Curso Profesional FrontEnd
+									span: a.url( href="http://www.mejorando.la", target="_blank" ) www.mejorando.la
+									span.descripcion Plataforma Platzi.
+							div.grp-educacion
+								div.fecha
+									span 2012
+								div.lugar
+									span.nombre Facebook Aplicaction Developer
+									span: a.url( href="http://www.cibertec.edu.pe", target="_blank" ) www.cibertec.edu.pe
+									span.descripcion Cibertec.
+							div.grp-educacion
+								div.fecha
+									span 2009 - 2011
+								div.lugar
+									span.nombre Redes y Comunicaciones de Datos
+									span: a.url( href="http://www.tecsup.edu.pe", target="_blank" ) www.tecsup.edu.pe
+									span.descripcion Tecsup.
+							div.grp-educacion
+								div.fecha
+									span 2009
+								div.lugar
+									span.nombre Flash CS4 / As3
+									span.descripcion Zona-D ( Actualmente <a href="http://www.area51.pe/" target="_blank">Area51</a> ).
+						div#btn-descargar-cv
+							a( href="pdf/cv_cahuana_juan.pdf", target="_blank" ) Descargar CV
+		footer#footer
+			.footer-inner
+				.acerca-demi
+						h2 Algo de mi
+						p Me llamo juan Antonio, me apasiona el mundo digital y cómo este puede proveer soluciones a nuestras necesidades, por sobre todo el proceso de implementar dicha solución.
+						p Así también disfruto mucho de los deportes de contacto, las artes marciales y cómo a través de ellas exploramos el desarrollo físico que podemos alcanzar. En resumen se me hace muy interesante ir rompiendo nuestros propios límites en cualquier área.
+				.enlaces
+					h2 Links
+					ul
+						li.link-github <span class="icon icon-github"></span> Revisa mi código en <a href="https://github.com/jcahuana" target="_blank">Github</a>
+						li.link-twitter <span class="icon icon-twitter"></span> Sígueme en <a href="https://twitter.com/jcahuana" target="_blank">Twitter</a>
+						li.link-behance <span class="icon icon-behance"></span> Mi portafolio en <a href="http://www.behance.net/jcahuana" target="_blank">Behance</a>
+						li.link-youtube <span class="icon icon-youtube"></span> Mi canal de <a href="https://www.youtube.com/user/flashadictos" target="_blank">Youtube</a>
+				.tweets
+					h2 Tweets
+					div#twitter-animation
+					div#cnt-tweet
+						<a class="twitter-timeline" href="https://twitter.com/JCahuana" data-widget-id="462324739948548096" data-chrome="noheader nofooter noborders" data-tweet-limit="1" lang="ES">Tweets por @JCahuana</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			.copyright
+				.copyright-inner
+					p.detalle © 2014 Juan Cahuana
+					p.celular <span class="icon icon-mobile"></span> cel: 958516052
+					p.email <span class="icon icon-mail"></span> e-mail: <a href="mailto:jcahuanam@gmail.com">jcahuanam@gmail.com</a>
+	script( src="js/perfil.min.js")

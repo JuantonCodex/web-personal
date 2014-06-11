@@ -1,0 +1,84 @@
+#main
+	padding 0 15px
+	.main-inner
+		margin 0 auto
+		max-width 1000px
+		padding 50px 0 0 0
+		#portafolio
+			overflow hidden
+			.wrapper-slide
+				width 50%
+				margin-right 2%
+				float left
+				@media mw790
+					width 100%
+					float none
+				.slide
+					width 100%
+					position relative
+					ul.rslides
+						overflow hidden
+						margin 0
+						padding 0
+						list-style none
+						width 100%
+						li 
+							background #595959
+							padding 2%
+							width 96%
+							@media mw790
+								padding 1.5%
+								width 97%
+							img
+								width 100%
+				ul.rslides_tabs
+					list-style none
+					padding 10px 0 20px 0
+					margin 0 auto
+					text-align center
+					overflow hidden
+					li
+						background #999999
+						opacity 0.8
+						display block
+						float left
+						margin-right 15px
+						border-radius 50%
+						width 20px
+						height 20px
+						border-radius 50%
+						box-shadow 2px 2px 2px #000
+						&:hover
+							background #FD9E00	
+							opacity 1
+						&.rslides_here
+							background #FD9E00	
+							opacity 1
+						a
+							display block
+							height 0
+							overflow hidden
+							padding-top 20px
+			.descripcion
+				width 48%
+				float left
+				@media mw790
+					width 100%
+					float none
+				h1
+					color #D87B72
+					font 24px bitterregular
+					margin 0 0 15px 0
+					padding 0
+				p 
+					color #DDDDDD
+					text-align justify
+					font 17px titillium_webregular
+					line-height 21px
+					margin 0 0 10px 0
+					&.compatibilidad
+						margin-top 20px
+						margin-bottom 0px
+					&.tecnologia
+						margin-top 20px
+						margin-bottom 0px
