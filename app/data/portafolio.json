@@ -33,23 +33,6 @@
 			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
 		}
 	},
-	"Recetario Cartavio":{
-		"categoria":"Mobile App",
-		"img_portada":"photos/portafolio/cartavio-recetario-portada.jpg",
-		"estado": "finished",
-		"img_slide":[
-			"photos/portafolio/cartavio-recetario-slide-1.jpg",
-			"photos/portafolio/cartavio-recetario-slide-2.jpg",
-			"photos/portafolio/cartavio-recetario-slide-3.jpg",
-			"photos/portafolio/cartavio-recetario-slide-4.jpg",
-			"photos/portafolio/cartavio-recetario-slide-5.jpg"
-		],
-		"detalle":{
-			"texto":"<p>Áplicación móvil responsive para Ron Cartavio.</p><p>En la página inicial se muestra los productos destacados y se puede ingresar a cada uno de ellos para ver sus descripciones.</p><p>En la segunda sección se muestra una gran variedad de recetas, al ingresar a cualquiera de ellas para ver la preparación, nos da la posibilidad de darle 'like' y ésta se publica en el muro.</p><p>Las otras dos secciones son de historia de la empresa y de los lugares promocionados donde se puede adquirir el producto.</p><p>La aplicación registra los datos los usuarios que le dieron 'like' a alguna receta. Estos datos luego se pueden descargar en un documento excel.</p>",
-			"compatibilidad":"Android - IOS.",
-			"tecnologias": "HTML5 - Phonegap - Facebook API - PHP - MySQL."
-		}
-	},
 	"New Kia Cerato 2014":{
 		"categoria":"Web Site",
 		"img_portada":"photos/portafolio/kia-cerato2014-portada.jpg",
