@@ -9,7 +9,20 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	stripDebug = require('gulp-strip-debug'),
 	minifyCSS = require('gulp-minify-css'),
-	minifyHTML = require('gulp-minify-html');
+	minifyHTML = require('gulp-minify-html')
+	connect = require('gulp-connect');
+
+/*  ==========================================================================
+    Servidor con livereload
+    ========================================================================== */
+gulp.task('connect', function () {
+	var path = (argv.production) ? prodPath : devPath;
+	connect.server({
+		root: 'app',
+		livereload: true
+	});
+});
+
 
 gulp.task('js', function(){
 	//Home
