@@ -7,6 +7,6 @@ Estructura completa de mi sitio web personal. Contiene los archivos de desarroll
 2. Instalar paquetes: bower install
 3. Iniciar servidor para poder ver en browser: npm start
 
-Más adelante estará ordenando mejor el flujo y agregando plugins.
+Más adelante estaré ordenando mejor el flujo y agregando plugins.
 
 Contacto: jcahuanam@gmail.com
