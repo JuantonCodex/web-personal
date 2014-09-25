@@ -9,7 +9,10 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	stripDebug = require('gulp-strip-debug'),
 	minifyCSS = require('gulp-minify-css'),
-	minifyHTML = require('gulp-minify-html')
+	stylus = require('gulp-stylus'),
+	prefix = require('gulp-autoprefixer'), //Autoprefixer de CSS
+	jade = require('gulp-jade'),
+	minifyHTML = require('gulp-minify-html'),
 	connect = require('gulp-connect');
 
 /*  ==========================================================================
@@ -26,42 +29,51 @@ gulp.task('connect', function () {
 
 gulp.task('js', function(){
 	//Home
-	var bundleStreamHome = browserify('./app/js/home.js').transform(debowerify).bundle()
+	var bundleStreamHome = browserify('./app/js/home.js').transform(debowerify).bundle();
 	bundleStreamHome
-		.pipe(source('home.min.js')) 
+		.pipe(source('home.min.js'))
 		.pipe( streamify(uglify()) )
 		.pipe( streamify(stripDebug()) )
 		.pipe(gulp.dest('./public/js'));
-		
+
 	//Perfil
-	var bundleStreamPerfil = browserify('./app/js/perfil.js').transform(debowerify).bundle()
+	var bundleStreamPerfil = browserify('./app/js/perfil.js').transform(debowerify).bundle();
 	bundleStreamPerfil
-		.pipe(source('perfil.min.js')) 
+		.pipe(source('perfil.min.js'))
 		.pipe( streamify(uglify()) )
 		.pipe( streamify(stripDebug()) )
 		.pipe(gulp.dest('./public/js'));
 
 	//Portafolio
-	var bundleStreamPortafolio = browserify('./app/js/portafolio.js').transform(debowerify).bundle()
+	var bundleStreamPortafolio = browserify('./app/js/portafolio.js').transform(debowerify).bundle();
 	bundleStreamPortafolio
-		.pipe(source('portafolio.min.js')) 
+		.pipe(source('portafolio.min.js'))
 		.pipe( streamify(uglify()) )
 		.pipe( streamify(stripDebug()) )
 		.pipe(gulp.dest('./public/js'));
 
 	//Contacto
-	var bundleStreamContacto = browserify('./app/js/contacto.js').transform(debowerify).bundle()
+	var bundleStreamContacto = browserify('./app/js/contacto.js').transform(debowerify).bundle();
 	bundleStreamContacto
-		.pipe(source('contacto.min.js')) 
+		.pipe(source('contacto.min.js'))
 		.pipe( streamify(uglify()) )
 		.pipe( streamify(stripDebug()) )
 		.pipe(gulp.dest('./public/js'));
 });
 
+gulp.task('stylus', function(){
+	gulp.src('./app/stylus/*.min.styl')
+		.pipe(stylus({
+      compress: true
+		}))
+		.pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+		.pipe(gulp.dest('./app/css'));
+});
+
 gulp.task('css', function(){
-	gulp.src('./app/css/**/*.css')
+	gulp.src(['./app/css/**/*.css', '!./app/css/portafolio.interior.min.css'])
 		.pipe(minifyCSS({ keepSpecialComments:'*', keepBreaks:'*' }))
-		.pipe(gulp.dest('./public/css'))
+		.pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('images', function(){
@@ -80,23 +92,29 @@ gulp.task('photos', function(){
 		.pipe(gulp.dest(imgDst));
 });
 
+gulp.task('jade', function(){
+	gulp.src(['./app/jade/*.jade', '!./app/jade/portafolio-interior.jade'])
+		.pipe(jade({ pretty: true }))
+		.pipe(gulp.dest('./app'));
+});
+
 gulp.task('html', function(){
 	gulp.src('./app/*.html')
 		.pipe(minifyHTML())
-		.pipe(gulp.dest('./public'));	
+		.pipe(gulp.dest('./public'));
 });
 
 gulp.task('fonts', function(){
 	gulp.src('./app/fonts/**')
-		.pipe(gulp.dest('./public/fonts'))
+		.pipe(gulp.dest('./public/fonts'));
 });
 
 gulp.task('data', function(){
 	gulp.src('./app/data/**')
-		.pipe(gulp.dest('./public/data'))
+		.pipe(gulp.dest('./public/data'));
 });
 
 gulp.task('pdf', function(){
 	gulp.src('./app/pdf/**')
-		.pipe(gulp.dest('./public/pdf'))
+		.pipe(gulp.dest('./public/pdf'));
 });
