@@ -94,13 +94,15 @@ gulp.task('photos', function(){
 
 gulp.task('jade', function(){
 	gulp.src(['./app/jade/*.jade', '!./app/jade/portafolio-interior.jade'])
-		.pipe(jade({ pretty: false }))
+		.pipe(jade({
+			pretty:true
+		}))
 		.pipe(gulp.dest('./app'));
 });
 
 gulp.task('html', function(){
 	gulp.src('./app/*.html')
-		//.pipe(minifyHTML())
+		.pipe(minifyHTML())
 		.pipe(gulp.dest('./public'));
 });
 

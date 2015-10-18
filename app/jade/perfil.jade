@@ -4,19 +4,23 @@ mixin ie(condition)
 	| <![endif]-->
 
 doctype html
-html( lang="es-PE" )
+html( lang="es" )
 	head
-		meta( name="viewport", content="initial-scale=1, maximum-scale=1, width=device-width" )
-		title Juan Cahuana - Web Developer - Perfil
 		meta( charset="utf-8")
+		meta( name="viewport", content="initial-scale=1, maximum-scale=1, width=device-width" )
+		title Acerca de Juan Cahuana | Desarrollador Front-End
+		meta( name="description", content="Soy un desarrollador web enfocado especialmente en el lado Front-End. Busco siempre dar el mejor rendimiento y reducir el tiempo de carga de todo sitio que desarrollo, asi también tengo experiencia en el desarrollo Back-End usando php y el cms Wordpress" )
+		
+		include ./includes/favicon.jade
 		link( rel="stylesheet", href="css/perfil.min.css")
 		+ie('if lt IE 9')
 			script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		include ./includes/google_analytics.jade
 	body
 		header#header
 			.header-inner
 				div#logo
-					a( href="index.html" ): img( src="img/logo.png" )
+					a( href="index.html" ): img( src="img/logo.png", alt="Juan Cahuana - Desarrollador Web" )
 				div#btn-menu
 				nav#nav
 					div.arrow.icon-arrow-up
@@ -40,7 +44,7 @@ html( lang="es-PE" )
 								div.nombre
 									i.devicons.devicons-code
 									| Jade
-								div.progress: div.progress-bar( style="width: 80%" )
+								div.progress: div.progress-bar( style="width: 60%" )
 							div.grp-habilidad
 								div.nombre
 									i.devicons.devicons-css3
@@ -48,24 +52,29 @@ html( lang="es-PE" )
 								div.progress: div.progress-bar( style="width: 90%" )
 							div.grp-habilidad
 								div.nombre
+									i.devicons.devicons-sass
+									| Sass
+								div.progress: div.progress-bar( style="width: 75%" )
+							div.grp-habilidad
+								div.nombre
 									i.devicons.devicons-stylus
 									| Stylus
-								div.progress: div.progress-bar( style="width: 80%" )
+								div.progress: div.progress-bar( style="width: 60%" )
 							div.grp-habilidad
 								div.nombre
 									i.devicons.devicons-javascript
 									| Javascript
-								div.progress: div.progress-bar( style="width: 90%" )
+								div.progress: div.progress-bar( style="width: 85%" )
 							div.grp-habilidad
 								div.nombre
 									i.devicons.devicons-backbone
 									| BackboneJS
-								div.progress: div.progress-bar( style="width: 50%" )
+								div.progress: div.progress-bar( style="width: 30%" )
 							div.grp-habilidad
 								div.nombre
 									i.devicons.devicons-angular
 									| AngularJS
-								div.progress: div.progress-bar( style="width: 40%" )
+								div.progress: div.progress-bar( style="width: 20%" )
 							div.grp-habilidad
 								div.nombre
 									i.devicons.devicons-aptana
@@ -75,7 +84,12 @@ html( lang="es-PE" )
 								div.nombre
 									i.devicons.devicons-php
 									| Php
-								div.progress: div.progress-bar( style="width: 60%" )
+								div.progress: div.progress-bar( style="width: 70%" )
+							div.grp-habilidad
+								div.nombre
+									i.devicons.devicons-wordpress
+									| Wordpress
+								div.progress: div.progress-bar( style="width: 50%" )
 							div.grp-habilidad
 								div.nombre
 									i.devicons.devicons-phonegap
@@ -85,7 +99,7 @@ html( lang="es-PE" )
 								div.nombre
 									i.devicons.devicons-code_badge
 									| As3
-								div.progress: div.progress-bar( style="width: 30%" )
+								div.progress: div.progress-bar( style="width: 20%" )
 							div.grp-habilidad
 								div.nombre
 									i.devicons.devicons-gulp
@@ -95,10 +109,23 @@ html( lang="es-PE" )
 								div.nombre
 									i.devicons.devicons-atom
 									| Atom
-								div.progress: div.progress-bar( style="width: 60%" )
+								div.progress: div.progress-bar( style="width: 80%" )
+							div.grp-habilidad
+								div.nombre
+									i.devicons.devicons-git
+									| Git
+								div.progress: div.progress-bar( style="width: 40%" )
 				section#experiencia.section
 					.perfil-inner
 						h2 Experiencia
+						div.lista-experiencia
+							div.grp-experiencia
+								div.fecha
+									span 2015
+								div.lugar
+									span.nombre Grupo La República - Digital
+									span: a.url( href="http://larepublica.pe", target="_blank" ) www.larepublica.pe
+									span.descripcion Empresa periodística.
 						div.lista-experiencia
 							div.grp-experiencia
 								div.fecha
@@ -151,11 +178,11 @@ html( lang="es-PE" )
 						div.lista-educacion
 							div.grp-educacion
 								div.fecha
-									span 2014 (En curso)
+									span 2015
 								div.lugar
-									span.nombre Curso Profesional de Php con Laravel
-									span: a.url( href="http://www.mejorando.la", target="_blank" ) www.mejorando.la
-									span.descripcion Plataforma Platzi.
+									span.nombre Wordpress theme Development
+									span: a.url( href="https://teamtreehouse.com", target="_blank" ) www.teamtreehouse.com
+									span.descripcion Teamtreehouse Platform.
 							div.grp-educacion
 								div.fecha
 									span 2014
@@ -169,7 +196,7 @@ html( lang="es-PE" )
 									span 2013
 								div.lugar
 									span.nombre Curso Profesional FrontEnd
-									span: a.url( href="http://www.mejorando.la", target="_blank" ) www.mejorando.la
+									span: a.url( href="http://www.platzi.com", target="_blank" ) www.platzi.com
 									span.descripcion Plataforma Platzi.
 							div.grp-educacion
 								div.fecha
@@ -191,30 +218,7 @@ html( lang="es-PE" )
 								div.lugar
 									span.nombre Flash CS4 / As3
 									span.descripcion Zona-D ( Actualmente <a href="http://www.area51.pe/" target="_blank">Area51</a> ).
-						div#btn-descargar-cv
-							a( href="pdf/cv_cahuana_juan.pdf", target="_blank" ) Descargar CV
-		footer#footer
-			.footer-inner
-				.acerca-demi
-						h2 Algo de mi
-						p Me llamo juan Antonio, me apasiona el mundo digital y cómo este puede proveer soluciones a nuestras necesidades, por sobre todo el proceso de implementar dicha solución.
-						p Así también disfruto mucho de los deportes de contacto, las artes marciales y cómo a través de ellas exploramos el desarrollo físico que podemos alcanzar. En resumen se me hace muy interesante ir rompiendo nuestros propios límites en cualquier área.
-				.enlaces
-					h2 Links
-					ul
-						li.link-github <span class="icon icon-github"></span> Revisa mi código en <a href="https://github.com/jcahuana" target="_blank">Github</a>
-						li.link-twitter <span class="icon icon-twitter"></span> Sígueme en <a href="https://twitter.com/jcahuana" target="_blank">Twitter</a>
-						li.link-behance <span class="icon icon-behance"></span> Mi portafolio en <a href="http://www.behance.net/jcahuana" target="_blank">Behance</a>
-						li.link-youtube <span class="icon icon-youtube"></span> Mi canal de <a href="https://www.youtube.com/user/flashadictos" target="_blank">Youtube</a>
-				.tweets
-					h2 Tweets
-					div#twitter-animation
-					div#cnt-tweet
-						<a class="twitter-timeline" href="https://twitter.com/JCahuana" data-widget-id="462324739948548096" data-chrome="noheader nofooter noborders" data-tweet-limit="1" lang="ES">Tweets por @JCahuana</a>
-						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			.copyright
-				.copyright-inner
-					p.detalle © 2014 Juan Cahuana
-					p.celular <span class="icon icon-mobile"></span> cel: 958516052
-					p.email <span class="icon icon-mail"></span> e-mail: <a href="mailto:jcahuanam@gmail.com">jcahuanam@gmail.com</a>
+						//- div#btn-descargar-cv
+						//- 	a( href="pdf/cv_cahuana_juan.pdf", target="_blank" ) Descargar CV
+		include ./includes/footer.jade
 	script( src="js/perfil.min.js")

@@ -14,6 +14,24 @@
 			"tecnologias": "HTML5 - MySQL - Facebook API."
 		}
 	},
+	"Groupon Pasarela Payme":{
+		"categoria":"Web Site",
+		"img_portada":"photos/portafolio/groupon-pasarela-payme-portada.jpg",
+		"estado": "finished",
+		"img_slide":[
+			"photos/portafolio/groupon-pasarela-payme-slide-1.jpg",
+			"photos/portafolio/groupon-pasarela-payme-slide-2.jpg",
+			"photos/portafolio/groupon-pasarela-payme-slide-3.jpg",
+			"photos/portafolio/groupon-pasarela-payme-slide-4.jpg",
+			"photos/portafolio/groupon-pasarela-payme-slide-5.jpg",
+			"photos/portafolio/groupon-pasarela-payme-slide-6.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Desarrollo FrontEnd: Maquetado e interactividad.</p><p>Se maquetó un diseño para múltiples resolucione y se programó las validaciones e interactividad de todas las pantallas. Las páginas corresponden a la parte Front-End de una pasarela de pago usando 'Pay-me'. Todos los archivos HTML y CSS están minificados, así también los archivos Javascript están concatenados en un sólo archivo y minificado, todo esto para optimizar el tiempo de carga y la cantidad de peticiones al servidor. Por el lado de las imágenes todos los archivos Png y Jpg están optimizados con el mismo propósito de optimizar el tiempo de carga.</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "HTML5 - CSS3 - Javascript."
+		}
+	},
 	"Fiat Punto":{
 		"categoria":"Facebook App",
 		"img_portada":"photos/portafolio/fiat-punto-portada.jpg",
@@ -149,5 +167,5 @@
 			"tecnologias": "HTML5 - Facebook API - PHP - MySQL."
 		}
 	}
-	
+
 }
