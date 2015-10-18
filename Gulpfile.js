@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	changed = require('gulp-changed'),
 	imagemin = require('gulp-imagemin'),
+	tinypng = require('gulp-tinypng'),
 	stripDebug = require('gulp-strip-debug'),
 	minifyCSS = require('gulp-minify-css'),
 	stylus = require('gulp-stylus'),
@@ -76,12 +77,19 @@ gulp.task('css', function(){
 		.pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('images', function(){
+gulp.task('no-png', function(){
 	var imgDst = './public/img';
-	gulp.src('./app/img/**/*')
+	gulp.src(['./app/img/**/*', '!./app/img/**/*.png']) // Todas las imágenes menos los PNG
 		.pipe(changed(imgDst))
 		.pipe(imagemin())
 		.pipe(gulp.dest(imgDst));
+});
+
+gulp.task('png', function(){
+	var imgDst = './public/img';
+	gulp.src('./app/img/**/*.png') // Sólo los archivos PNG
+    .pipe(tinypng('CHD9zVb-3FcqW3C0kzIX_fR3L-UArybO'))
+    .pipe(gulp.dest(imgDst));
 });
 
 gulp.task('photos', function(){
