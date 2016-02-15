@@ -1,0 +1,55 @@
+mixin ie_condition(condition)
+	| <!--[!{condition}]>
+	block
+	| <![endif]-->
+
+block _variables_menu_
+	- var btn_home = "";
+	- var btn_perfil = "";
+	- var btn_portafolio = "";
+	- var btn_contacto = "";
+	
+doctype html
+html( lang="es" )
+	head
+		meta( charset="utf-8")
+		meta( name="viewport", content="initial-scale=1, maximum-scale=1, width=device-width" )
+		title Juan Cahuana - Desarrollador Front-End
+		meta( name="description", content="Desarrollador Front-End en Lima - Perú. Desarrollo de sitios web responsive optimizados." )
+		
+		include ./includes/favicon.jade
+		
+		block _cssfiles_
+			link( rel="stylesheet", href="css/home.min.css")
+		
+		+ie_condition('if lt IE 9')
+			script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		include ./includes/google_analytics.jade
+	body
+		div.fullscreen-viewport
+			div.fullscreen
+		div#outer-wrapper
+			header#header
+				.header-inner
+					div#logo
+						a( href="/" ): img( src="img/juan-cahuana.png", alt="Juan Cahuana - Desarrollador Front-End" )
+					div#btn-menu
+					nav#nav
+						div.arrow.icon-arrow-up
+						ul
+							li(class="#{btn_home}")
+								a( href="/") Home
+							li(class="#{btn_perfil}")
+								a( href="perfil.html") Perfil
+							li(class="#{btn_portafolio}")
+								a( href="portafolio.html") Portafolio
+							li(class="#{btn_contacto}")
+								a( href="contacto.html") Contacto
+			div#main
+				.main-inner
+					block _contenido_
+          
+			include ./includes/footer.jade
+		
+		block _plantillas_
+		block _jsfiles_

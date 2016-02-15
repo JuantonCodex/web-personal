@@ -1,30 +1,40 @@
+// No Gulp plugins
 var source = require('vinyl-source-stream');
 var browserify = require("browserify");
 var debowerify = require("debowerify");
 
 var gulp = require('gulp'),
-	streamify = require('gulp-streamify'),
-	uglify = require('gulp-uglify'),
+	// Archivos varios
 	changed = require('gulp-changed'),
-	imagemin = require('gulp-imagemin'),
-	tinypng = require('gulp-tinypng'),
+	// Javascript
+	uglify = require('gulp-uglify'),
+	streamify = require('gulp-streamify'),
 	stripDebug = require('gulp-strip-debug'),
+	// Css
 	minifyCSS = require('gulp-minify-css'),
 	stylus = require('gulp-stylus'),
-	prefix = require('gulp-autoprefixer'), //Autoprefixer de CSS
+	prefix = require('gulp-autoprefixer'),
+	// Html
 	jade = require('gulp-jade'),
-	minifyHTML = require('gulp-minify-html'),
-	connect = require('gulp-connect');
+	htmlmin = require('gulp-htmlmin'),
 
-/*  ==========================================================================
-    Servidor con livereload
-    ========================================================================== */
-gulp.task('connect', function () {
-	var path = (argv.production) ? prodPath : devPath;
-	connect.server({
-		root: 'app',
-		livereload: true
-	});
+	// Imágenes
+	imagemin = require('gulp-imagemin'),
+	tinypng = require('gulp-tinypng'),
+
+	// Server
+	browserSync = require('browser-sync').create();
+
+/*-------------------------------------------------------------------------*
+:: Servidor Livereload
+--------------------------------------------------------------------------*/
+gulp.task('server', function () {
+	//var path = (argv.production) ? prodPath : devPath;
+	browserSync.init({
+    server: {
+      baseDir: "./app"
+    }
+  });
 });
 
 
@@ -77,6 +87,30 @@ gulp.task('css', function(){
 		.pipe(gulp.dest('./public/css'));
 });
 
+
+
+/*-------------------------------------------------------------------------*
+:: Jade y HTML
+--------------------------------------------------------------------------*/
+gulp.task('jade', function(){
+	gulp.src(['./app/jade/pages/*.jade'])
+		.pipe(jade({ pretty:true }))
+		.pipe(gulp.dest('./app'))
+		.on('end', function(){
+			browserSync.reload();
+		});
+});
+
+// Minificar HTML
+gulp.task('html', function(){
+	gulp.src('./app/*.html')
+		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(gulp.dest('./public'));
+});
+
+/*-------------------------------------------------------------------------*
+:: Imágenes
+--------------------------------------------------------------------------*/
 gulp.task('no-png', function(){
 	var imgDst = './public/img';
 	gulp.src(['./app/img/**/*', '!./app/img/**/*.png']) // Todas las imágenes menos los PNG
@@ -100,25 +134,17 @@ gulp.task('photos', function(){
 		.pipe(gulp.dest(imgDst));
 });
 
-gulp.task('jade', function(){
-	gulp.src(['./app/jade/*.jade', '!./app/jade/portafolio-interior.jade'])
-		.pipe(jade({
-			pretty:true
-		}))
-		.pipe(gulp.dest('./app'));
-});
-
-gulp.task('html', function(){
-	gulp.src('./app/*.html')
-		.pipe(minifyHTML())
-		.pipe(gulp.dest('./public'));
-});
-
+/*-------------------------------------------------------------------------*
+:: Fuentes
+--------------------------------------------------------------------------*/
 gulp.task('fonts', function(){
 	gulp.src('./app/fonts/**')
 		.pipe(gulp.dest('./public/fonts'));
 });
 
+/*-------------------------------------------------------------------------*
+:: Datos y PDF
+--------------------------------------------------------------------------*/
 gulp.task('data', function(){
 	gulp.src('./app/data/**')
 		.pipe(gulp.dest('./public/data'));
@@ -127,4 +153,12 @@ gulp.task('data', function(){
 gulp.task('pdf', function(){
 	gulp.src('./app/pdf/**')
 		.pipe(gulp.dest('./public/pdf'));
+});
+
+/*-------------------------------------------------------------------------*
+:: Init
+--------------------------------------------------------------------------*/
+gulp.task('start', function(){
+	gulp.start('server');
+	gulp.watch(['./app/jade/**/*.jade'], ['jade']);
 });

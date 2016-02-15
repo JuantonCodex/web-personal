@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
-    <title>Desarrollador Front-End | Juan Cahuana</title>
+    <title>Juan Cahuana - Desarrollador Front-End</title>
     <meta name="description" content="Desarrollador Front-End en Lima - Perú. Desarrollo de sitios web responsive optimizados.">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
@@ -31,6 +31,7 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       
       ga('create', 'UA-9761868-10', 'auto');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
     </script>
   </head>
@@ -41,7 +42,7 @@
     <div id="outer-wrapper">
       <header id="header">
         <div class="header-inner">
-          <div id="logo"><a href="/"><img src="img/logo.png" alt="Juan Cahuana - Desarrollador Web"></a></div>
+          <div id="logo"><a href="/"><img src="img/juan-cahuana.png" alt="Juan Cahuana - Desarrollador Front-End"></a></div>
           <div id="btn-menu"></div>
           <nav id="nav">
             <div class="arrow icon-arrow-up"></div>
@@ -64,7 +65,7 @@
           </div>
           <section id="clientes">
             <div class="fx-explosion"></div>
-            <h1>Proyectos para empresas como :</h1>
+            <h1>Proyectos para empresas como:</h1>
             <div class="lista-clientes"></div>
           </section>
         </div>
@@ -103,9 +104,9 @@
         </div>
       </footer>
     </div>
+    <script id="cliente-template" type="text/x-handlebars-template">
+      <div class="wrapper-img"><img src="{{imagen}}" alt="{{alt}}"></div>
+    </script>
+    <script src="js/home.min.js"></script>
   </body>
-  <script id="cliente-template" type="text/x-handlebars-template">
-    <div class="wrapper-img"><img src="{{imagen}}" alt="{{alt}}"></div>
-  </script>
-  <script src="js/home.min.js"></script>
 </html>

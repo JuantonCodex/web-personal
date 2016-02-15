@@ -1,0 +1,31 @@
+extends ./../base.jade
+
+block _variables_menu_
+	- var btn_home = "active";
+	- var btn_perfil = "";
+	- var btn_portafolio = "";
+	- var btn_contacto = "";
+	
+block _cssfiles_
+	link( rel="stylesheet", href="css/home.min.css")
+
+block _contenido_
+	div#slide
+		ul.rslides
+			li
+				a(href="portafolio.html#Fiat Punto")
+					img( src="photos/home/fiat-punto.jpg" )
+			li
+				a(href="portafolio.html#Recetario Cartavio")
+					img( src="photos/home/cartavio-recetario.jpg" )
+	section#clientes
+		div.fx-explosion
+		h1 Proyectos para empresas como:
+		div.lista-clientes
+
+block _plantillas_
+	script( id="cliente-template", type="text/x-handlebars-template" )
+		div.wrapper-img
+			img( src="{{imagen}}", alt="{{alt}}" )
+block _jsfiles_
+	script( src="js/home.min.js")

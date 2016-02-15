@@ -1,0 +1,31 @@
+extends ./../base.jade
+
+block _variables_menu_
+	- var btn_home = "";
+	- var btn_perfil = "";
+	- var btn_portafolio = "active";
+	- var btn_contacto = "";
+	
+block _cssfiles_
+	link( rel="stylesheet", href="css/portafolio.interior.min.css")
+
+block _contenido_
+	section#portafolio
+		div.trabajo
+			div.wrapper-slide
+				div.slide
+					ul.rslides
+						li: img( src="photos/portafolio/slide-1.jpg" )
+						li: img( src="photos/portafolio/slide-1.jpg" )
+			div.descripcion
+				h1 Miralavida
+				p Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.
+				p Se conecta a la API de facebook para registrar la usuario y pueda participar de la interactividad de los videos del sitio.
+				p Cada vez que el usuario contesta de manera afirmativa laspreguntas en cada video, una mensahe y una imagen del video respectivo es publicado en su muro de facebook.
+				p.compatibilidad Compatibilidad:
+				p IE8+, Chrome  y Firefox.
+				p.tecnologia Tecnologìas:
+				p HTML5, MySQL, Facebook API.
+		
+block _jsfiles_
+	script( src="js/portafolio.interior.min.js")
