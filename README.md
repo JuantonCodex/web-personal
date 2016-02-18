@@ -1,12 +1,19 @@
-web-personal
-============
+# web-personal
 
 Estructura completa de mi sitio web personal. Contiene los archivos de desarrollo en app/ y los archivos de producción en public/
 
-1. Instalar paquetes: npm install
-2. Instalar paquetes: bower install
-3. Iniciar servidor para poder ver en browser: npm start
+Requisitos:
+<ol>
+<li>Instalar Nodejs.</li>
+<li>Instalar Python 2.7 como mínimo.</li>
+<li>Instalar Bower: npm install bower -g (el comando -g es opcional, es para que se instale de manera global).</li>
+</ol>
 
-Más adelante estaré ordenando mejor el flujo y agregando plugins.
+Instalamos las dependencias:
+<ol>
+<li>Paquetes npm: npm install.</li>
+<li>Paquetes bower: bower install.</li>
+<li>Iniciar servidor web para el proyecto: npm start.</li>
+</ol>
 
 Contacto: jcahuanam@gmail.com

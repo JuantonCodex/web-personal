@@ -1,0 +1,26 @@
+extends ./../base.jade
+
+block _variables_menu_
+	- var btn_home = "";
+	- var btn_perfil = "";
+	- var btn_portafolio = "";
+	- var btn_contacto = "active";
+	
+block _cssfiles_
+	link( rel="stylesheet", href="css/contacto.min.css")
+
+block _contenido_
+	section#contacto
+		div.detalles
+			h1 Contacto
+			p Conversemos y saquemos adelante ese proyecto que tienes en mente.
+			p Puedes comunicarte conmigo por estos medios:
+			ul.medios
+				li Cel: 931836339
+				li: a( href="mailto:jcahuanam@gmail.com" ) E-mail: jcahuanam@gmail.com
+		div.icono
+			figure
+				img( src="img/ico-contact.png", alt="Envíame un mensaje y conversemos." )
+				
+block _jsfiles_
+	script( src="js/contacto.min.js")

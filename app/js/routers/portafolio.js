@@ -17,9 +17,8 @@ module.exports = Backbone.Router.extend({
 
 		this.current = {};
 		this.jsonData = {};
-		this.totalProyectos;
 		this.contadorProyectos = 0;
-		
+
 		this.portadas = new PortadasCollection();
 		this.portadasView = new PortadasView({ collection:this.portadas });
 
@@ -48,7 +47,7 @@ module.exports = Backbone.Router.extend({
 
 		}else{
 			console.log("Hago uso de ls data JSON ya cargada");
-			this.addTrabajo(name);	
+			this.addTrabajo(name);
 		}
 	},
 
@@ -72,7 +71,7 @@ module.exports = Backbone.Router.extend({
 	},
 
 	addPortada: function(name, data){
-		
+
 		//Agrego a la colección de portadas un modelo de portada
 		this.portadas.add(new PortadaModel({
 			nombre: name,
@@ -87,7 +86,7 @@ module.exports = Backbone.Router.extend({
 
 	addTrabajo: function(name){
 
-		this.current.trabajo = this.jsonData[name]; 
+		this.current.trabajo = this.jsonData[name];
 		var trabajo = this.current.trabajo;
 
 		var listaImagenes = [];
@@ -97,7 +96,7 @@ module.exports = Backbone.Router.extend({
 					listaImagenes.push({url:trabajo.img_slide[i]});
 				}
 			}
-		} 
+		}
 		getImagenes();
 
 		this.trabajos.add(new TrabajoModel({
@@ -106,9 +105,9 @@ module.exports = Backbone.Router.extend({
 			imagenes_slide: listaImagenes,
 			texto: trabajo.detalle.texto,
 			compatibilidad: trabajo.detalle.compatibilidad,
-			tecnologias: trabajo.detalle.tecnologias	
+			tecnologias: trabajo.detalle.tecnologias
 		}));
-	
+
 		Backbone.Portafolio.fnSlide();
 	}
 

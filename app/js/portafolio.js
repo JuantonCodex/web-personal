@@ -13,7 +13,7 @@ $(function(){
 	Backbone.Portafolio = {
 		animacionProgress : false,
 		fnSlide: function(){
-			
+
 			$(".rslides").responsiveSlides({
 				nav: false,
 				pagination: true,
@@ -24,7 +24,7 @@ $(function(){
 			var slide = $('.rslides_tabs');
 			var numBotones = slide.children().length;
 			var anchoBoton = slide.children('li:first-child').outerWidth(true);
-			
+
 			function alinearBotones(){
 				var marginLeft = (slide.width() - (anchoBoton*numBotones))/2;
 				slide.children('li:first-child').css('margin-left',marginLeft+'px');
@@ -35,10 +35,10 @@ $(function(){
 			});
 		},
 		fnAnimacionProgress: function(){
-			
+
 			self = this;
-			
-			if(self.animacionProgress == true){
+
+			if(self.animacionProgress === true){
 				$('.progress').destroy();
 				self.animacionProgress = false;
 			}
@@ -48,6 +48,6 @@ $(function(){
 			});
 			self.animacionProgress = true;
 		}
-	}
+	};
 
 });
