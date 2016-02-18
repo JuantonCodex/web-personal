@@ -1,5 +1,31 @@
-/node_modules
-/npm-debug.log
-/component.json
-/bower_components
-/app/components
+# logs and databases #
+######################
+**/*.log
+**/*.sql
+**/*.sqlite
+
+# Environment        #
+######################
+wp-env.php
+wp-settings.php
+/wp-content/cache/
+/wp-content/cache/supercache/
+
+# front-end files    #
+######################
+**/.gulp
+**/node_modules
+**/npm-debug.log
+**/component.json
+**/bower_components
+**/app/components
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
