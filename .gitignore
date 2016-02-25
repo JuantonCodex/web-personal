@@ -7,7 +7,7 @@
 # Environment        #
 ######################
 wp-env.php
-wp-settings.php
+wp-config.php
 /wp-content/cache/
 /wp-content/cache/supercache/
 
