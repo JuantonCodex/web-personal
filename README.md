@@ -6,7 +6,9 @@ Requisitos:
 <ol>
 <li>Instalar Nodejs.</li>
 <li>Instalar Python 2.7 como mínimo.</li>
-<li>Instalar Bower: npm install bower -g (el comando -g es opcional, es para que se instale de manera global).</li>
+<li>Instalar node-gyp: npm install -g node-gyp. (Requisitos:  https://github.com/nodejs/node-gyp)</li>
+<li>Instalar Bower: npm install gulp -g (-g es para que se instale de manera global).</li>
+<li>Instalar Bower: npm install bower -g (-g es para que se instale de manera global).</li>
 </ol>
 
 Instalamos las dependencias:
@@ -16,4 +18,7 @@ Instalamos las dependencias:
 <li>Iniciar servidor web para el proyecto: npm start.</li>
 </ol>
 
-Contacto: jcahuanam@gmail.com
+<br>Nota: Si deseas desinstalar todos los paquetes npm locales puedes usar el siguiente comando desde el Git Bash:
+npm uninstall `ls -1 node_modules | tr '/\n' ' '`
+
+<br>Contacto: jcahuanam@gmail.com
