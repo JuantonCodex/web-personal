@@ -6,7 +6,7 @@ Estructura completa de mi sitio web personal. Contiene los archivos de desarroll
 <ol>
 <li>Instalar Nodejs.</li>
 <li>Instalar Python 2.7 como mínimo.</li>
-<li>Instalar node-gyp: npm install -g node-gyp. (requisitos:  https://github.com/nodejs/node-gyp)</li>
+<li>Instalar node-gyp: npm install -g node-gyp. (requisitos:  https://github.com/nodejs/node-gyp).</li>
 <li>Instalar Bower: npm install gulp -g (-g es para que se instale de manera global).</li>
 <li>Instalar Bower: npm install bower -g (-g es para que se instale de manera global).</li>
 </ol>
@@ -19,9 +19,11 @@ Estructura completa de mi sitio web personal. Contiene los archivos de desarroll
 </ol>
 
 #### Iniciar el servidor web
-Ejecutar el comando: gulp server. La carpeta que se muestra al iniciar el servidor se encuentra declara en el archivo Gulpfile en el task 'server'.
+Ejecutar el comando: gulp server. La carpeta que se muestra al iniciar el servidor se encuentra declara en el archivo Gulpfile.js en el task 'server'.
 
-<br/>Nota: Si deseas desinstalar todos los paquetes npm locales puedes usar el siguiente comando desde el Git Bash:
+
+Nota: Si deseas desinstalar todos los paquetes npm locales puedes usar el siguiente comando desde el Git Bash:
 npm uninstall `ls -1 node_modules | tr '/\n' ' '`
 
-<br/>Contacto: jcahuanam@gmail.com
+
+Contacto: jcahuanam@gmail.com
