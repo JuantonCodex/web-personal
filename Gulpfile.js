@@ -32,7 +32,7 @@ gulp.task('server', function () {
 	//var path = (argv.production) ? prodPath : devPath;
 	browserSync.init({
     server: {
-      baseDir: "./app"
+      baseDir: "./public"
     }
   });
 });
