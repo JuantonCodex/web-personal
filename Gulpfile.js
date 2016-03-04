@@ -10,8 +10,9 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	streamify = require('gulp-streamify'),
 	stripDebug = require('gulp-strip-debug'),
+
 	// Css
-	minifyCSS = require('gulp-minify-css'),
+	cleanCSS = require('gulp-clean-css');
 	stylus = require('gulp-stylus'),
 	prefix = require('gulp-autoprefixer'),
 	// Html
@@ -83,7 +84,7 @@ gulp.task('stylus', function(){
 
 gulp.task('css', function(){
 	gulp.src(['./app/css/**/*.css', '!./app/css/portafolio.interior.min.css'])
-		.pipe(minifyCSS({ keepSpecialComments:'*', keepBreaks:'*' }))
+		.pipe(cleanCSS())
 		.pipe(gulp.dest('./public/css'));
 });
 
