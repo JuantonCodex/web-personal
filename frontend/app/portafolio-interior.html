@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/portafolio.min.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/portafolio.interior.min.css"><!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]--><!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PB9MV8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -56,8 +56,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </header>
       <div id="main">
         <div class="main-inner">
-          <section id="portafolio"></section>
-          <div id="btn-portafolio-behance"><a href="http://www.behance.net/jcahuana" target="_blank">Ver en Behance</a></div>
+          <section id="portafolio">
+            <div class="trabajo">
+              <div class="wrapper-slide">
+                <div class="slide">
+                  <ul class="rslides">
+                    <li><img src="photos/portafolio/slide-1.jpg"></li>
+                    <li><img src="photos/portafolio/slide-1.jpg"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="descripcion">
+                <h1>Miralavida</h1>
+                <p>Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.</p>
+                <p>Se conecta a la API de facebook para registrar la usuario y pueda participar de la interactividad de los videos del sitio.</p>
+                <p>Cada vez que el usuario contesta de manera afirmativa laspreguntas en cada video, una mensahe y una imagen del video respectivo es publicado en su muro de facebook.</p>
+                <p class="compatibilidad">Compatibilidad:</p>
+                <p>IE8+, Chrome  y Firefox.</p>
+                <p class="tecnologia">Tecnologìas:</p>
+                <p>HTML5, MySQL, Facebook API.</p>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
       <footer id="footer">
@@ -94,42 +114,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </footer>
     </div>
-    <script id="portada-template" type="text/x-handlebars-template">
-      <div class="imagen">
-        <div class="viewport"><a href="portafolio.html#{{nombre}}">
-            <div class="icon-portafolio-link-work"></div><img src="{{imagen_portada}}"></a></div>
-      </div>
-      <div class="nombre">
-        <h2>{{nombre}}</h2>
-      </div>
-    </script>
-    <script id="portada-progress-template" type="text/x-handlebars-template">
-      <div class="imagen">
-        <div class="viewport"><img src="{{imagen_portada}}"></div>
-      </div>
-      <div class="nombre">
-        <h2>{{nombre}}</h2>
-        <div class="progress"></div>
-      </div>
-    </script>
-    <script id="trabajo-template" type="text/x-handlebars-template">
-      <div class="wrapper-slide">
-        <div class="slide">
-          <ul class="rslides">{{#each imagenes_slide}}
-            <li><img src="{{url}}"></li>{{/each}}
-          </ul>
-        </div>
-      </div>
-      <div class="descripcion">
-        <h1>{{titulo}}</h1>
-        <h2>{{categoria}}</h2>
-        <div class="texto">{{{texto}}}</div>
-        <p class="compatibilidad">Compatibilidad:</p>
-        <p>{{compatibilidad}}</p>
-        <p class="tecnologia">Tecnologías:</p>
-        <p>{{tecnologias}}</p>
-      </div>
-    </script>
-    <script src="js/portafolio.min.js"></script>
+    <script src="js/portafolio.interior.min.js"></script>
   </body>
 </html>
