@@ -33,7 +33,7 @@ gulp.task('server', function () {
 	//var path = (argv.production) ? prodPath : devPath;
 	browserSync.init({
     server: {
-      baseDir: "./public"
+      baseDir: "./app"
     }
   });
 });
@@ -74,26 +74,30 @@ gulp.task('js', function(){
 });
 
 gulp.task('stylus', function(){
+	console.log("Stylus ...");
 	gulp.src('./app/stylus/*.min.styl')
 		.pipe(stylus({
       compress: true
 		}))
 		.pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
-		.pipe(gulp.dest('./app/css'));
+		.pipe(gulp.dest('./app/css'))
+		.on('end', function(){
+			browserSync.reload();
+		});
 });
 
+// Enviar a carpeta "Public"
 gulp.task('css', function(){
 	gulp.src(['./app/css/**/*.css', '!./app/css/portafolio.interior.min.css'])
 		.pipe(cleanCSS())
 		.pipe(gulp.dest('./public/css'));
 });
 
-
-
 /*-------------------------------------------------------------------------*
 :: Jade y HTML
 --------------------------------------------------------------------------*/
 gulp.task('jade', function(){
+	console.log("Jade ...");
 	gulp.src(['./app/jade/pages/*.jade'])
 		.pipe(jade({ pretty:true }))
 		.pipe(gulp.dest('./app'))
@@ -102,7 +106,7 @@ gulp.task('jade', function(){
 		});
 });
 
-// Minificar HTML
+// Enviar a carpeta "Public"
 gulp.task('html', function(){
 	gulp.src('./app/*.html')
 		.pipe(htmlmin({collapseWhitespace: true}))
@@ -161,5 +165,6 @@ gulp.task('pdf', function(){
 --------------------------------------------------------------------------*/
 gulp.task('start', function(){
 	gulp.start('server');
-	gulp.watch(['./app/jade/**/*.jade'], ['jade']);
+	gulp.watch(['./app/stylus/*.styl'], ['stylus']);
+	gulp.watch(['./app/jade/**/*.jade', './app/jade/**/*.html'], ['jade']);
 });
