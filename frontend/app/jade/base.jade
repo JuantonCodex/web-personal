@@ -3,6 +3,10 @@ mixin ie_condition(condition)
 	block
 	| <![endif]-->
 
+block _variables_head_
+	- var page_title = "Juan Cahuana - Desarrolador Front-End";
+	- var page_description = "Desarrollador web en Lima- Perú.";
+	
 block _variables_menu_
 	- var btn_home = "";
 	- var btn_perfil = "";
@@ -14,8 +18,8 @@ html( lang="es" )
 	head
 		meta( charset="utf-8")
 		meta( name="viewport", content="initial-scale=1, maximum-scale=1, width=device-width" )
-		title Juan Cahuana - Desarrollador Front-End
-		meta( name="description", content="Desarrollador Front-End en Lima - Perú. Desarrollo de sitios web responsive optimizados." )
+		title #{page_title}
+		meta( name="description", content="#{page_description}" )
 		
 		include ./includes/favicon.jade
 		
@@ -24,8 +28,8 @@ html( lang="es" )
 		
 		+ie_condition('if lt IE 9')
 			script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
-		include ./includes/tracking/gtm.html
 	body
+		include ./includes/tracking/gtm.html
 		div.fullscreen-viewport
 			div.fullscreen
 		div#outer-wrapper
