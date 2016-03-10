@@ -108,7 +108,7 @@ gulp.task('jade', function(){
 
 // Enviar a carpeta "Public"
 gulp.task('html', function(){
-	gulp.src('./app/*.html')
+	gulp.src(['./app/*.html', '!./app/portafolio-interior.html'])
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public'));
 });
