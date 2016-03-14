@@ -1,0 +1,100 @@
+#header
+	background transparent url(../img/bg-header.jpg) 0 0 repeat
+	border-bottom 5px solid #3EA4FF
+	min-height 85px
+	padding 0 15px
+	overflow hidden
+	@media mw610
+		padding 0
+		border-bottom 0
+	.header-inner
+		margin 0 auto
+		max-width 1000px
+		#logo
+			padding-top 12px
+			float left
+			width 208px
+			@media mw905
+				text-align center
+				float none
+				margin 0 auto
+			@media mw610
+				img
+					max-height 50px
+					display inline-block
+		#btn-menu
+			background #3ea4ff
+			cursor pointer
+			display none
+			margin-top 5px
+			height 40px
+			text-align center
+			&:before
+				content: "\e600";
+				color #06447B
+				font 28px icomoon
+				line-height 40px
+			@media mw610
+				display block
+		#nav
+			float right
+			height 85px
+			position relative
+			@media mw905
+				margin-top 15px
+				width 100%
+			@media mw610
+				display none
+				height 145px
+				margin 0
+				overflow hidden
+			.arrow
+				top 69px
+				position absolute
+				left 0
+				width 25px
+				color #3EA4FF
+				font-size 25px
+				@media mw610
+					display none
+			ul
+				list-style none
+				height 100%
+				padding 0
+				margin 0
+				overflow hidden
+				li
+					display table
+					float left
+					height 100%
+					width 160px
+					@media mw905
+						width 25%
+					@media mw610
+						float none
+						height 35px
+						width 100%
+						border-bottom 1px solid #E8EFF7
+						&:last-child
+							border-bottom 0
+					&.active
+						background #BFEFFF
+						a
+							color #0085B2
+							&:hover
+								background #BFEFFF
+					a
+						color #595959
+						display table-cell
+						font 20px bitterregular
+						height 100%
+						text-align center
+						text-decoration none
+						text-transform uppercase
+						vertical-align middle
+						width 100%
+						&:hover
+							color #0085B2
+							background #D7F5FF
+						@media mw610
+							font-size 18px

@@ -3,27 +3,31 @@
 		"clientes":[
 			{
 				"imagen": "photos/home/logo-kia.png",
-				"textoAlt": "Kia"	
+				"textoAlt": "Kia Perú"
 			},
 			{
 				"imagen": "photos/home/logo-vizzio.png",
-				"textoAlt": "Vizzio"	
+				"textoAlt": "Vizzio"
 			},
 			{
 				"imagen": "photos/home/logo-fiat.png",
-				"textoAlt": "Fiat"	
+				"textoAlt": "Fiat"
 			},
 			{
 				"imagen": "photos/home/logo-miamont.png",
-				"textoAlt": "Mia Mont"	
+				"textoAlt": "Mia Mont"
 			},
 			{
 				"imagen": "photos/home/logo-guarana.png",
-				"textoAlt": "Guaraná"	
+				"textoAlt": "Guaraná Backus"
 			},
 			{
 				"imagen": "photos/home/logo-wong.png",
 				"textoAlt": "Wong"
+			},
+			{
+				"imagen": "photos/home/logo-grupo-larepublica.png",
+				"textoAlt": "Grupo La República"
 			}
 		]
 	}

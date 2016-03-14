@@ -1,20 +1,23 @@
 // No Gulp plugins
 var source = require('vinyl-source-stream');
-var browserify = require("browserify");
 var debowerify = require("debowerify");
 
 var gulp = require('gulp'),
-	// Archivos varios
+
+	// Utilidades
 	changed = require('gulp-changed'),
+	rename = require('gulp-rename'),
+
 	// Javascript
+	browserify = require('gulp-browatchify'),
 	uglify = require('gulp-uglify'),
-	streamify = require('gulp-streamify'),
 	stripDebug = require('gulp-strip-debug'),
 
 	// Css
 	cleanCSS = require('gulp-clean-css');
 	stylus = require('gulp-stylus'),
 	prefix = require('gulp-autoprefixer'),
+
 	// Html
 	jade = require('gulp-jade'),
 	htmlmin = require('gulp-htmlmin'),
@@ -33,48 +36,36 @@ gulp.task('server', function () {
 	//var path = (argv.production) ? prodPath : devPath;
 	browserSync.init({
     server: {
-      baseDir: "./app"
+      baseDir: "./public"
     }
   });
 });
 
+// JS Browserify
+gulp.task('browserify', function () {
+  gulp.src(['./app/js/home.js', './app/js/contacto.js'])
+    .pipe(browserify({
+			debug: !process.env.production,
+			transforms:[debowerify]
+		}))
+    .pipe(source('home.min.js'))
+    .pipe(gulp.dest('./app/js'))
+		.on('end', function(){
+			browserSync.reload();
+		});
+})
 
+// JS
 gulp.task('js', function(){
-	//Home
-	var bundleStreamHome = browserify('./app/js/home.js').transform(debowerify).bundle();
-	bundleStreamHome
-		.pipe(source('home.min.js'))
-		.pipe( streamify(uglify()) )
-		.pipe( streamify(stripDebug()) )
-		.pipe(gulp.dest('./public/js'));
-
-	//Perfil
-	var bundleStreamPerfil = browserify('./app/js/perfil.js').transform(debowerify).bundle();
-	bundleStreamPerfil
-		.pipe(source('perfil.min.js'))
-		.pipe( streamify(uglify()) )
-		.pipe( streamify(stripDebug()) )
-		.pipe(gulp.dest('./public/js'));
-
-	//Portafolio
-	var bundleStreamPortafolio = browserify('./app/js/portafolio.js').transform(debowerify).bundle();
-	bundleStreamPortafolio
-		.pipe(source('portafolio.min.js'))
-		.pipe( streamify(uglify()) )
-		.pipe( streamify(stripDebug()) )
-		.pipe(gulp.dest('./public/js'));
-
-	//Contacto
-	var bundleStreamContacto = browserify('./app/js/contacto.js').transform(debowerify).bundle();
-	bundleStreamContacto
-		.pipe(source('contacto.min.js'))
-		.pipe( streamify(uglify()) )
-		.pipe( streamify(stripDebug()) )
-		.pipe(gulp.dest('./public/js'));
+	gulp.src('./app/js/*.min.js')
+	.pipe(uglify())
+	.pipe(stripDebug())
+	.pipe(gulp.dest('./public/js'));
 });
 
+
+// Stylus
 gulp.task('stylus', function(){
-	console.log("Stylus ...");
 	gulp.src('./app/stylus/*.min.styl')
 		.pipe(stylus({
       compress: true
@@ -86,16 +77,14 @@ gulp.task('stylus', function(){
 		});
 });
 
-// Enviar a carpeta "Public"
+// CSS
 gulp.task('css', function(){
 	gulp.src(['./app/css/**/*.css', '!./app/css/portafolio.interior.min.css'])
 		.pipe(cleanCSS())
 		.pipe(gulp.dest('./public/css'));
 });
 
-/*-------------------------------------------------------------------------*
-:: Jade y HTML
---------------------------------------------------------------------------*/
+// Jade
 gulp.task('jade', function(){
 	console.log("Jade ...");
 	gulp.src(['./app/jade/pages/*.jade'])
@@ -106,16 +95,14 @@ gulp.task('jade', function(){
 		});
 });
 
-// Enviar a carpeta "Public"
+// HTML
 gulp.task('html', function(){
 	gulp.src(['./app/*.html', '!./app/portafolio-interior.html'])
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public'));
 });
 
-/*-------------------------------------------------------------------------*
-:: Imágenes
---------------------------------------------------------------------------*/
+// Imágenes
 gulp.task('no-png', function(){
 	var imgDst = './public/img';
 	gulp.src(['./app/img/**/*', '!./app/img/**/*.png']) // Todas las imágenes menos los PNG
@@ -127,34 +114,34 @@ gulp.task('no-png', function(){
 gulp.task('png', function(){
 	var imgDst = './public/img';
 	gulp.src('./app/img/**/*.png') // Sólo los archivos PNG
+		.pipe(changed(imgDst))
     .pipe(tinypng('CHD9zVb-3FcqW3C0kzIX_fR3L-UArybO'))
     .pipe(gulp.dest(imgDst));
 });
 
 gulp.task('photos', function(){
 	var imgDst = './public/photos';
-	gulp.src('./app/photos/**/*')
+	gulp.src('./app/photos/**/*.png')
 		.pipe(changed(imgDst))
-		.pipe(imagemin())
+		// .pipe(imagemin())
+		.pipe(tinypng('CHD9zVb-3FcqW3C0kzIX_fR3L-UArybO'))
 		.pipe(gulp.dest(imgDst));
 });
 
-/*-------------------------------------------------------------------------*
-:: Fuentes
---------------------------------------------------------------------------*/
+// Fuentes
 gulp.task('fonts', function(){
 	gulp.src('./app/fonts/**')
 		.pipe(gulp.dest('./public/fonts'));
 });
 
-/*-------------------------------------------------------------------------*
-:: Datos y PDF
---------------------------------------------------------------------------*/
+// Datos
 gulp.task('data', function(){
-	gulp.src('./app/data/**')
+	gulp.src('./app/data/**/*.json')
+		.pipe(changed('./public/data'))
 		.pipe(gulp.dest('./public/data'));
 });
 
+// Archivos PDF
 gulp.task('pdf', function(){
 	gulp.src('./app/pdf/**')
 		.pipe(gulp.dest('./public/pdf'));
@@ -165,6 +152,7 @@ gulp.task('pdf', function(){
 --------------------------------------------------------------------------*/
 gulp.task('start', function(){
 	gulp.start('server');
-	gulp.watch(['./app/stylus/*.styl'], ['stylus']);
+	gulp.watch(['./app/stylus/**/*.styl'], ['stylus']);
 	gulp.watch(['./app/jade/**/*.jade', './app/jade/**/*.html'], ['jade']);
+	gulp.watch(['./app/js/**/*.js', '!./app/js/*.min.js'], ['browserify']);
 });

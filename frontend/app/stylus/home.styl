@@ -1,12 +1,14 @@
 mw790 = "only screen and (max-width: 790px)"
 #main
 	padding 0 15px
+	@media mw610
+		padding 0 10px
 	.main-inner
 		margin 0 auto
 		max-width 1000px
 		padding 25px 0 0 0
 		#slide
-			margin-bottom 45px
+			margin-bottom 35px
 			position relative
 			.rslides_nav
 				border 3px solid #fff
@@ -48,19 +50,18 @@ mw790 = "only screen and (max-width: 790px)"
 				li
 					background #999999
 					opacity 0.8
-					display block
-					float left
-					margin-right 15px
+					display inline-block
+					margin 0 5px
 					border-radius 50%
 					width 20px
 					height 20px
 					border-radius 50%
 					box-shadow 2px 2px 2px #000
 					&:hover
-						background #FD9E00	
+						background #FD9E00
 						opacity 1
 					&.rslides_here
-						background #FD9E00	
+						background #FD9E00
 						opacity 1
 					a
 						display block
@@ -74,19 +75,26 @@ mw790 = "only screen and (max-width: 790px)"
 			h1
 				color #fff
 				font 24px bitterregular
+				line-height: 29px
 				text-shadow 2px 2px 2px #000000
 				margin 0 0 30px 0
-			.fx-explosion
+				@media mw450
+					font-size 20px
+			.sprite-explosion
+				background transparent url(../img/efecto-explosion.png) left center
 				display none
-				background transparent url(../img/efecto-explosion.png) 0 0 no-repeat
 				height 90px
-				width 94px
 				position absolute
+				width 94px
+				animation playexplosion .5s steps(10) infinite
 				top 0
 				left 0
-				margin-left -47px
 				z-index 4
-			.lista-clientes		
+				margin-left -47px
+			@keyframes playexplosion
+				100%
+					background-position -940px
+			.lista-clientes
 				.cliente
 					float left
 					height 90px
@@ -96,14 +104,14 @@ mw790 = "only screen and (max-width: 790px)"
 					.wrapper-img
 						display table
 						margin 0 auto
+						position relative
 						img
 							cursor pointer
 							margin 0 auto
 							width 100%
 					@media mw790
 						width 50%
+						height auto
 						img
-							width auto
-							height 100%
-					@media mw610
-						width 100%
+							width 100%
+							height auto

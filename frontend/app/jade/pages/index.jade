@@ -23,13 +23,13 @@ block _contenido_
 				a(href="portafolio.html#Recetario Cartavio")
 					img( src="photos/home/cartavio-recetario.jpg" )
 	section#clientes
-		div.fx-explosion
-		h1 Proyectos para empresas como:
+		.sprite-explosion
+		h1 Trabajos para empresas como:
 		div.lista-clientes
 
 block _plantillas_
 	script( id="cliente-template", type="text/x-handlebars-template" )
 		div.wrapper-img
-			img( src="{{imagen}}", alt="{{alt}}" )
+			img( src="{{imagen}}", alt="{{textoAlt}}", title="{{textoAlt}}")
 block _jsfiles_
 	script( src="js/home.min.js")

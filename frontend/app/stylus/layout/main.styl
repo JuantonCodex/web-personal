@@ -1,0 +1,39 @@
+mw905 = "only screen and (max-width: 905px)"
+mw790 = "only screen and (max-width: 790px)"
+mw610 = "only screen and (max-width: 610px)"
+mw550 = "only screen and (max-width: 550px)"
+mw450 = "only screen and (max-width: 450px)"
+colorTexto = #DDDDDD
+
+@import "./vendor/devicons"
+@import "./vendor/icomoon"
+@import "./modules/publicidad"
+@import "./layout/header"
+@import "./layout/footer"
+
+img
+	display block
+	border none
+*
+	outline none
+
+body
+	background #202020
+.fullscreen-viewport
+	height 100%
+	overflow hidden
+	position absolute
+	width 100%
+	@media mw790
+		display none
+	.fullscreen
+		background transparent url(../img/bg-world.jpg) 0 0 no-repeat
+		height 110%
+		width 110%
+		background-size 100%
+		position fixed
+#outer-wrapper
+	position relative
+	z-index 2
+	height 100%
+	width 100%

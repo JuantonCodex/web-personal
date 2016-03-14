@@ -1,17 +1,15 @@
 jQuery = $ = require('../components/jquery/dist/jquery');
-require('../components/spritely/src/jquery.spritely');
 
 var Main = {
 	init: function(){
 
 		this.fnNavMenu();
-		$('#twitter-animation').sprite({fps: 11, no_of_frames: 4});
 	},
 	fnNavMenu: function(){
 		var nav = $('#nav');
 		var cantBotones = nav.find('li').length;
-		
-		//Menú movil
+
+		// Menú movil
 		var menuMobile = $('#btn-menu');
 		menuMobile.on('click', function(){
 			nav.slideToggle();
@@ -30,7 +28,7 @@ var Main = {
 			if(menuMobile.css('display') == 'none'){
 				nav.show();
 			}
-			
+
 		});
 
 		function actualizandoMedidas(){
@@ -42,8 +40,9 @@ var Main = {
 			posInicial = iInicial*liW + (liW - arrowW)/2;
 			arrow.css('left',posInicial);
 		}
-		
+
 		actualizandoMedidas();
+
 		//Animación de la flecha
 		nav.find('li').on('mouseover', function(){
 			var iDestino = nav.find('li').index(this);
@@ -60,5 +59,5 @@ var Main = {
 		});
 	}
 };
-	
+
 module.exports = Main;

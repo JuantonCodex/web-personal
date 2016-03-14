@@ -19,21 +19,27 @@ body
 	background #323232
 #main
 	padding 0 15px
+	@media mw610
+		padding 0 10px
 	.main-inner
 		margin 0 auto
 		max-width 1000px
 		padding 50px 0 0 0
+		@media mw610
+			padding-top 25px
 		#portafolio
 			overflow hidden
 			.work
+				box-sizing border-box
 				float left
-				width 31%
-				margin-right 2%
+				width 33.3333%
+				padding 0 10px
 				margin-bottom 30px
 				@media mw790
-					width 48%
+					width 50%
 				@media mw550
-					width 98%
+					padding 0
+					width 100%
 				&:hover
 					.nombre
 						h2
@@ -92,7 +98,7 @@ body
 						img
 							margin 0 auto
 							width 100%
-					
+
 			.trabajo
 				overflow hidden
 				.wrapper-slide
@@ -111,7 +117,7 @@ body
 							padding 0
 							list-style none
 							width 100%
-							li 
+							li
 								background #595959
 								padding 2%
 								width 96%
@@ -140,10 +146,10 @@ body
 							border-radius 50%
 							box-shadow 2px 2px 2px #000
 							&:hover
-								background #FD9E00	
+								background #FD9E00
 								opacity 1
 							&.rslides_here
-								background #FD9E00	
+								background #FD9E00
 								opacity 1
 							a
 								display block
@@ -167,7 +173,7 @@ body
 						font 18px titillium_webregular
 						margin 0 0 15px 0
 						padding 0 0 0 23px
-					p 
+					p
 						color #DDDDDD
 						text-align justify
 						font 17px titillium_webregular
@@ -197,7 +203,7 @@ body
 			text-shadow none
 			width 170px
 			margin 10px auto 0 auto
-			a 
+			a
 				color #CFCFCF
 				display block
 				width 100%
@@ -206,4 +212,4 @@ body
 					color #fff
 					text-shadow 1px 1px 1px #666
 			&:hover
-				background #D87C72 url(../img/ico-portafolio-behance.png) 145px -29px no-repeat	
+				background #D87C72 url(../img/ico-portafolio-behance.png) 145px -29px no-repeat

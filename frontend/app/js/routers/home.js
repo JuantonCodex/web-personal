@@ -10,10 +10,10 @@ module.exports = Backbone.Router.extend({
 	},
 
 	initialize: function(){
-		
+
 		this.current = {};
 		this.jsonData = {};
-		
+
 		this.clientes = new ClientesCollection();
 		this.clientelist = new ClientesView({ collection: this.clientes });
 		Backbone.history.start();
@@ -44,7 +44,7 @@ module.exports = Backbone.Router.extend({
 	},
 
 	addCliente: function(cliente){
-		
+
 		this.clientes.add(new ClienteModel({
 			imagen: cliente.imagen,
 			textoAlt: cliente.textoAlt
