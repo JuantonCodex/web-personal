@@ -7,7 +7,6 @@ var Backbone = require('backbone'),
 	Backbone.$ = $;
 
 $(function(){
-
 	Backbone.app = new HomeRouter();
 	Main.init();
 

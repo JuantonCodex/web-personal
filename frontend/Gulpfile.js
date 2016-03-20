@@ -33,27 +33,41 @@ var gulp = require('gulp'),
 :: Servidor Livereload
 --------------------------------------------------------------------------*/
 gulp.task('server', function () {
-	//var path = (argv.production) ? prodPath : devPath;
 	browserSync.init({
     server: {
-      baseDir: "./public"
+      baseDir: "./app"
     }
   });
 });
 
 // JS Browserify
-gulp.task('browserify', function () {
-  gulp.src(['./app/js/home.js', './app/js/contacto.js'])
-    .pipe(browserify({
-			debug: !process.env.production,
-			transforms:[debowerify]
-		}))
-    .pipe(source('home.min.js'))
-    .pipe(gulp.dest('./app/js'))
-		.on('end', function(){
-			browserSync.reload();
-		});
-})
+var browserify_process = function(){
+
+	var files = ['home', 'contacto', 'perfil', 'portafolio'];
+	var counter_process = 0;
+	var reload_sever = false;
+
+	var gulp_sync = function( file_name ){
+		var name = file_name + '.js',
+				output_name = file_name + '.min.js';
+
+		return gulp.src('./app/js/'+ name)
+			.pipe(browserify({
+				debug: !process.env.production,
+				transforms:[debowerify]
+			}))
+			.pipe(source(output_name))
+			.pipe(gulp.dest('./app/js'))
+			.on('end', function(){
+				browserSync.reload();
+			});
+	};
+
+	for (var i = 0; i < files.length; i++) {
+		gulp_sync( files[i] );
+	}
+
+};
 
 // JS
 gulp.task('js', function(){
@@ -154,5 +168,7 @@ gulp.task('start', function(){
 	gulp.start('server');
 	gulp.watch(['./app/stylus/**/*.styl'], ['stylus']);
 	gulp.watch(['./app/jade/**/*.jade', './app/jade/**/*.html'], ['jade']);
-	gulp.watch(['./app/js/**/*.js', '!./app/js/*.min.js'], ['browserify']);
+	gulp.watch(['./app/js/**/*.js', '!./app/js/*.min.js'], function(){
+		browserify_process();
+	});
 });

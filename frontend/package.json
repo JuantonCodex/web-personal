@@ -28,6 +28,7 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "debowerify": "^0.7.1",
+    "filename": "^0.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-browatchify": "0.0.0",
