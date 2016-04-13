@@ -32,8 +32,15 @@ var gulp = require('gulp'),
 /*-------------------------------------------------------------------------*
 :: Servidor Livereload
 --------------------------------------------------------------------------*/
-gulp.task('server', function () {
-	//var path = (argv.production) ? prodPath : devPath;
+gulp.task('server-dev', function () {
+	browserSync.init({
+    server: {
+      baseDir: "./app"
+    }
+  });
+});
+
+gulp.task('server-prod', function () {
 	browserSync.init({
     server: {
       baseDir: "./public"
@@ -53,7 +60,7 @@ gulp.task('browserify', function () {
 		.on('end', function(){
 			browserSync.reload();
 		});
-})
+});
 
 // JS
 gulp.task('js', function(){
@@ -151,7 +158,7 @@ gulp.task('pdf', function(){
 :: Init
 --------------------------------------------------------------------------*/
 gulp.task('start', function(){
-	gulp.start('server');
+	gulp.start('server-dev');
 	gulp.watch(['./app/stylus/**/*.styl'], ['stylus']);
 	gulp.watch(['./app/jade/**/*.jade', './app/jade/**/*.html'], ['jade']);
 	gulp.watch(['./app/js/**/*.js', '!./app/js/*.min.js'], ['browserify']);
