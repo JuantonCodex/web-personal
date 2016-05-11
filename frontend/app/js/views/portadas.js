@@ -5,10 +5,10 @@ var Backbone = require('backbone'),
 
 module.exports = Backbone.View.extend({
 	el: $('#portafolio'),
-	
+
 	initialize: function(){
-		this.listenTo(this.collection, "add", this.addOne, this);	
-		this.listenTo(this.collection, "reset", this.render, this);	
+		this.listenTo(this.collection, "add", this.addOne, this);
+		this.listenTo(this.collection, "reset", this.render, this);
 	},
 
 	render: function(){
@@ -18,7 +18,7 @@ module.exports = Backbone.View.extend({
 	},
 
 	addOne: function(portada){
-		
+
 		var estado = portada.attributes.estado;
 		var portadaView;
 
@@ -27,13 +27,13 @@ module.exports = Backbone.View.extend({
 		}else{
 			portadaView = new PortadaView({ model:portada });
 		}
-		
+
 		this.$el.append(portadaView.render().el);
 	},
 
 	addAll: function(){
-		console.log(this.collection);
-		this.collection.forEach(this.addOne, this);	
+		// console.log(this.collection);
+		this.collection.forEach(this.addOne, this);
 	}
 
 });

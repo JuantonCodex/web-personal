@@ -37,6 +37,7 @@ module.exports = Backbone.Router.extend({
 	work: function(name){
 		$('#btn-portafolio-behance').hide();
 		this.portadas.reset();
+
 		if(Object.keys(this.jsonData).length === 0){
 
 			console.log("Cargo la data JSON porque estoy accediendo directamente a un trabajo");
@@ -75,6 +76,7 @@ module.exports = Backbone.Router.extend({
 		//Agrego a la colección de portadas un modelo de portada
 		this.portadas.add(new PortadaModel({
 			nombre: name,
+			url: data.url,
 			imagen_portada: data.img_portada,
 			estado: data.estado
 		}));
@@ -84,10 +86,19 @@ module.exports = Backbone.Router.extend({
 		}
 	},
 
-	addTrabajo: function(name){
+	addTrabajo: function(url){
+		// Obtenemos el objeto en base a la url
+		var name;
+		for (var node in this.jsonData) {
+			if (this.jsonData[node].url === url) {
+				name = node;
+			}
+		}
 
 		this.current.trabajo = this.jsonData[name];
 		var trabajo = this.current.trabajo;
+
+
 
 		var listaImagenes = [];
 		function getImagenes(){
