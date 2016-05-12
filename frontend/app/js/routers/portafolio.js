@@ -98,8 +98,6 @@ module.exports = Backbone.Router.extend({
 		this.current.trabajo = this.jsonData[name];
 		var trabajo = this.current.trabajo;
 
-
-
 		var listaImagenes = [];
 		function getImagenes(){
 			for(var i in trabajo.img_slide){
@@ -110,8 +108,11 @@ module.exports = Backbone.Router.extend({
 		}
 		getImagenes();
 
+		$('.share-button').html('');
+		$(document).attr('title', 'Proyecto: '+name);
 		this.trabajos.add(new TrabajoModel({
 			titulo: name,
+			url: trabajo.url,
 			categoria: trabajo.categoria,
 			imagenes_slide: listaImagenes,
 			texto: trabajo.detalle.texto,
@@ -120,6 +121,13 @@ module.exports = Backbone.Router.extend({
 		}));
 
 		Backbone.Portafolio.fnSlide();
+		var timerShareButton = setInterval(function(){
+			if(FB){
+				FB.XFBML.parse();
+				clearInterval(timerShareButton);
+				console.log('clear');
+			}
+		},500);
 	}
 
 });

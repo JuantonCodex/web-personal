@@ -22,10 +22,20 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/portafolio.interior.min.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/portafolio.min.css"><!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]--><script src="//load.sumome.com/" data-sumo-site-id="ecf78bc6114fd994f5b6a872d8ca717e204a8bb3eca5608b4b768f9ca13f65a6" async="async"></script>
   </head>
-  <body><!-- Google Tag Manager -->
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.6&appId=1736000783314172";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script><!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PB9MV8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -62,12 +72,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="slide">
                   <ul class="rslides">
                     <li><img src="photos/portafolio/slide-1.jpg"></li>
-                    <li><img src="photos/portafolio/slide-1.jpg"></li>
                   </ul>
                 </div>
               </div>
               <div class="descripcion">
                 <h1>Miralavida</h1>
+                <h2>Web Site</h2>
+                <div class="share-button">
+                  <div data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-mobile-iframe="true" class="fb-share-button"></div>
+                </div>
                 <p>Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.</p>
                 <p>Se conecta a la API de facebook para registrar la usuario y pueda participar de la interactividad de los videos del sitio.</p>
                 <p>Cada vez que el usuario contesta de manera afirmativa laspreguntas en cada video, una mensahe y una imagen del video respectivo es publicado en su muro de facebook.</p>
@@ -130,6 +143,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </footer>
     </div>
-    <script src="js/portafolio.interior.min.js"></script>
+    <script src="js/portafolio.min.js"></script>
   </body>
 </html>

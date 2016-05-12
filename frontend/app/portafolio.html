@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
     <title>Portafolio de trabajos - Desarrollador FrontEnd - Lima, Perú</title>
-    <meta name="description" content="Lista de trabajos que he desarrollado. Proyectos para marcas como Vizzio, Guaraná, Kia Perú, otros.">
+    <meta name="description" content="Portafolio de trabajos. Proyectos para marcas como Vizzio, Guaraná, Kia Perú, otros.">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
@@ -25,7 +25,17 @@
     <link rel="stylesheet" href="css/portafolio.min.css"><!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]--><script src="//load.sumome.com/" data-sumo-site-id="ecf78bc6114fd994f5b6a872d8ca717e204a8bb3eca5608b4b768f9ca13f65a6" async="async"></script>
   </head>
-  <body><!-- Google Tag Manager -->
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.6&appId=1736000783314172";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script><!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PB9MV8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -56,7 +66,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </header>
       <div id="main">
         <div class="main-inner">
-          <section id="portafolio"></section>
+          <section id="portafolio">
+            <div class="loader"><img src="img/content-loader.gif" alt=""></div>
+          </section>
           <div id="btn-portafolio-behance"><a href="http://www.behance.net/jcahuana" target="_blank">Ver en Behance</a></div>
         </div>
       </div>
@@ -139,6 +151,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="descripcion">
         <h1>{{titulo}}</h1>
         <h2>{{categoria}}</h2>
+        <div class="share-button">
+          <div data-href="http://juancahuana.com/portafolio.html#{{{url}}}" data-layout="button_count" data-mobile-iframe="true" class="fb-share-button"></div>
+        </div>
         <div class="texto">{{{texto}}}</div>
         <p class="compatibilidad">Compatibilidad:</p>
         <p>{{compatibilidad}}</p>

@@ -2,7 +2,7 @@ extends ./../base.jade
 
 block _variables_head_
 	- var page_title = "Portafolio de trabajos - Desarrollador FrontEnd - Lima, Perú";
-	- var page_description = "Lista de trabajos que he desarrollado. Proyectos para marcas como Vizzio, Guaraná, Kia Perú, otros.";
+	- var page_description = "Portafolio de trabajos. Proyectos para marcas como Vizzio, Guaraná, Kia Perú, otros.";
 	
 block _variables_menu_
 	- var btn_home = "";
@@ -13,8 +13,13 @@ block _variables_menu_
 block _cssfiles_
 	link( rel="stylesheet", href="css/portafolio.min.css")
 
+block _fbscript_
+	include ../modules/_facebook-script.jade
+	
 block _contenido_
 	section#portafolio
+		div.loader
+			img(src="img/content-loader.gif", alt="")
 	div#btn-portafolio-behance
 		a( href="http://www.behance.net/jcahuana", target="_blank" ) Ver en Behance
 		
@@ -47,6 +52,8 @@ block _plantillas_
 		div.descripcion
 			h1 {{titulo}}
 			h2 {{categoria}}
+			div.share-button
+				div(class="fb-share-button", data-href="http://juancahuana.com/portafolio.html#{{{url}}}", data-layout="button_count", data-mobile-iframe="true")
 			div.texto {{{texto}}}
 			p.compatibilidad Compatibilidad:
 			p {{compatibilidad}}

@@ -29,6 +29,10 @@ body
 			padding-top 25px
 		#portafolio
 			overflow hidden
+			.loader
+				padding-bottom 5px
+				img
+					margin 0 auto
 			.work
 				box-sizing border-box
 				float left
@@ -156,14 +160,18 @@ body
 								height 0
 								overflow hidden
 								padding-top 20px
+								&:focus
+									outline 0
 				.descripcion
 					width 48%
 					float left
 					@media mw790
 						width 100%
 						float none
+					.share-button
+						padding-bottom 10px
 					h1
-						color #D87B72
+						color #FD9E00
 						font 24px bitterregular
 						margin 0 0 5px 0
 						padding 0
@@ -177,7 +185,7 @@ body
 						color #DDDDDD
 						text-align justify
 						font 17px titillium_webregular
-						line-height 21px
+						line-height 23px
 						margin 0 0 10px 0
 						&.compatibilidad
 							background transparent url(../img/sprite-icons-detalle-trabajo.png) 0 -23px no-repeat
