@@ -1,8 +1,10 @@
 {
 	"Juego Pedalea":{
+		"url": "kia-juego-pedalea",
 		"categoria":"Game App",
 		"img_portada":"photos/portafolio/kia-juegopedalea-portada.jpg",
 		"estado": "progress",
+		"id": 10,
 		"img_slide":[
 			"photos/portafolio/slide-1.jpg",
 			"photos/portafolio/slide-1.jpg",
@@ -15,9 +17,11 @@
 		}
 	},
 	"Groupon Pasarela Payme":{
+		"url": "groupon-web-pasarela-payme",
 		"categoria":"Web Site",
 		"img_portada":"photos/portafolio/groupon-pasarela-payme-portada.jpg",
 		"estado": "finished",
+		"id": 9,
 		"img_slide":[
 			"photos/portafolio/groupon-pasarela-payme-slide-1.jpg",
 			"photos/portafolio/groupon-pasarela-payme-slide-2.jpg",
@@ -33,9 +37,11 @@
 		}
 	},
 	"Fiat Punto":{
+		"url": "fiat-facebook-app-punto",
 		"categoria":"Facebook App",
 		"img_portada":"photos/portafolio/fiat-punto-portada.jpg",
 		"estado": "finished",
+		"id": 8,
 		"img_slide":[
 			"photos/portafolio/fiat-punto-slide-1.jpg",
 			"photos/portafolio/fiat-punto-slide-2.jpg",
@@ -52,9 +58,11 @@
 		}
 	},
 	"Recetario Cartavio":{
+		"url": "cartavio-mobile-app-recetario",
 		"categoria":"Mobile App",
 		"img_portada":"photos/portafolio/cartavio-recetario-portada.jpg",
 		"estado": "finished",
+		"id": 7,
 		"img_slide":[
 			"photos/portafolio/cartavio-recetario-slide-1.jpg",
 			"photos/portafolio/cartavio-recetario-slide-2.jpg",
@@ -69,9 +77,11 @@
 		}
 	},
 	"New Kia Cerato 2014":{
+		"url": "kia-web-new-cerato-2014",
 		"categoria":"Web Site",
 		"img_portada":"photos/portafolio/kia-cerato2014-portada.jpg",
 		"estado": "finished",
+		"id": 6,
 		"img_slide":[
 			"photos/portafolio/kia-cerato2014-slide-1.jpg",
 			"photos/portafolio/kia-cerato2014-slide-2.jpg",
@@ -87,9 +97,11 @@
 		}
 	},
 	"Verano no es verano":{
+		"url": "kia-facebook-app-verano-no-es-verano",
 		"categoria":"Facebook App",
 		"img_portada":"photos/portafolio/kia-veranosinkia-portada.jpg",
 		"estado": "finished",
+		"id": 5,
 		"img_slide":[
 			"photos/portafolio/kia-veranosinkia-slide-1.jpg",
 			"photos/portafolio/kia-veranosinkia-slide-2.jpg",
@@ -104,9 +116,11 @@
 		}
 	},
 	"Un Día":{
+		"url": "miamont-facebook-app-un-dia",
 		"categoria":"Facebook App",
 		"img_portada":"photos/portafolio/miamont-undia-portada.jpg",
 		"estado": "finished",
+		"id": 4,
 		"img_slide":[
 			"photos/portafolio/miamont-undia-slide-1.jpg",
 			"photos/portafolio/miamont-undia-slide-2.jpg",
@@ -121,9 +135,11 @@
 		}
 	},
 	"Modelos Toyota":{
+		"url": "toyota-facebook-app-modelos",
 		"categoria":"Facebook App",
 		"img_portada":"photos/portafolio/toyota-modelos-portada.jpg",
 		"estado": "finished",
+		"id": 3,
 		"img_slide":[
 			"photos/portafolio/toyota-modelos-slide-1.jpg"
 		],
@@ -134,9 +150,11 @@
 		}
 	},
 	"Momentos Vizzio":{
+		"url": "vizzio-facebook-app-momentos",
 		"categoria":"Facebook App",
 		"img_portada":"photos/portafolio/vizzio-momentosvizzio-portada.jpg",
 		"estado": "finished",
+		"id": 2,
 		"img_slide":[
 			"photos/portafolio/vizzio-momentosvizzio-slide-1.jpg",
 			"photos/portafolio/vizzio-momentosvizzio-slide-2.jpg",
@@ -150,9 +168,11 @@
 		}
 	},
 	"Eres Rock o Pop":{
+		"url": "guarana-facebook-app-eres-rock-o-pop",
 		"categoria":"Facebook App",
 		"img_portada":"photos/portafolio/guarana-rockpop-portada.jpg",
 		"estado": "finished",
+		"id": 1,
 		"img_slide":[
 			"photos/portafolio/guarana-rockpop-slide-1.jpg",
 			"photos/portafolio/guarana-rockpop-slide-2.jpg",

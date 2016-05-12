@@ -14,6 +14,7 @@ module.exports = Backbone.View.extend({
 
 	render: function(){
 		var portada = this.model.toJSON();
+		
 		var html = this.template(portada);
 		this.$el.html(html);
 		return this;
