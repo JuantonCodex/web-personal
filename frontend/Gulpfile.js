@@ -1,7 +1,8 @@
-// No Gulp plugins
+// No Gulp
 var source = require('vinyl-source-stream');
 var debowerify = require("debowerify");
 
+// Gulp
 var gulp = require('gulp'),
 
 	// Utilidades
