@@ -2,6 +2,10 @@
 	"home": {
 		"clientes":[
 			{
+				"imagen": "photos/home/logo-safetypay.png",
+				"textoAlt": "SafetyPay"
+			},
+			{
 				"imagen": "photos/home/logo-kia.png",
 				"textoAlt": "Kia Perú"
 			},
