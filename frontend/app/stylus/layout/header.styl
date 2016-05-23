@@ -4,24 +4,36 @@
 	min-height 85px
 	padding 0 15px
 	overflow hidden
-	@media mw610
+	@media mw790
 		padding 0
 		border-bottom 0
 	.header-inner
 		margin 0 auto
 		max-width 1000px
 		#logo
-			padding-top 12px
 			float left
 			width 208px
-			@media mw905
+			width 25%
+			box-sizing border-box
+			padding-right 20px
+			height 85px
+			line-height 85px
+			vertical-align middle
+			@media mw790
+				height 60px
+				line-height 60px
 				text-align center
-				float none
 				margin 0 auto
-			@media mw610
-				img
+				width 100%
+				float none
+			img
+				width 100%
+				max-width 208px
+				display inline-block
+				vertical-align middle
+				@media mw790
 					max-height 50px
-					display inline-block
+					width auto
 		#btn-menu
 			background #3ea4ff
 			cursor pointer
@@ -34,20 +46,20 @@
 				color #06447B
 				font 28px icomoon
 				line-height 40px
-			@media mw610
+			@media mw790
 				display block
 		#nav
 			float right
 			height 85px
 			position relative
-			@media mw905
-				margin-top 15px
-				width 100%
-			@media mw610
+			width 75%
+			@media mw790
 				display none
 				height 145px
 				margin 0
 				overflow hidden
+				width 100%
+				float none
 			.arrow
 				top 69px
 				position absolute
@@ -55,7 +67,7 @@
 				width 25px
 				color #3EA4FF
 				font-size 25px
-				@media mw610
+				@media mw790
 					display none
 			ul
 				list-style none
@@ -67,10 +79,8 @@
 					display table
 					float left
 					height 100%
-					width 160px
-					@media mw905
-						width 25%
-					@media mw610
+					width 25%
+					@media mw790
 						float none
 						height 35px
 						width 100%
@@ -86,7 +96,7 @@
 					a
 						color #595959
 						display table-cell
-						font 20px bitterregular
+						font 19px bitterregular
 						height 100%
 						text-align center
 						text-decoration none
@@ -96,5 +106,5 @@
 						&:hover
 							color #0085B2
 							background #D7F5FF
-						@media mw610
-							font-size 18px
+						@media mw905
+							font-size 17px
