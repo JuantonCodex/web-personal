@@ -4,7 +4,7 @@
 		"categoria":"Game App",
 		"img_portada":"photos/portafolio/kia-juegopedalea-portada.jpg",
 		"estado": "progress",
-		"id": 10,
+		"id": 11,
 		"img_slide":[
 			"photos/portafolio/slide-1.jpg",
 			"photos/portafolio/slide-1.jpg",
@@ -14,6 +14,29 @@
 			"texto":"<p>Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.</p><p>En la primera sección el sitio web muestra la oferta del auto y la actividad en redes sociales como Twitter y Facebook.</p><p>En la segunda sección el sitio web te da a escoger tres videos(la temática es sobre deportes de aventura) que te invitan a participar mediante una pregunta, si la respuesta es afirmativa el sitio web se conecta a la API de facebook para registrar la usuario y luego te da la posibilidad de publicar una imagen en nuestros muros.</p><p>Cada vez que el usuario contesta de manera afirmativa laspreguntas en cada video, una mensahe y una imagen del video respectivo es publicado en su muro de facebook.</p>",
 			"compatibilidad":"IE8+ / Chrome / Firefox.",
 			"tecnologias": "HTML5 - MySQL - Facebook API."
+		}
+	},
+	"Web Kia Perú":{
+		"url": "kia-peru-web",
+		"categoria":"Web Site",
+		"img_portada":"photos/portafolio/kia-web-principal-portada.jpg",
+		"estado": "finished",
+		"id": 10,
+		"img_slide":[
+			"photos/portafolio/kia-web-principal-slide-1.jpg",
+			"photos/portafolio/kia-web-principal-slide-2.jpg",
+			"photos/portafolio/kia-web-principal-slide-3.jpg",
+			"photos/portafolio/kia-web-principal-slide-4.jpg",
+			"photos/portafolio/kia-web-principal-slide-5.jpg",
+			"photos/portafolio/kia-web-principal-slide-6.jpg",
+			"photos/portafolio/kia-web-principal-slide-7.jpg",
+			"photos/portafolio/kia-web-principal-slide-8.jpg",
+			"photos/portafolio/kia-web-principal-slide-9.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Desarrollo FrontEnd:</p><p>Se maquetó un diseño para múltiples resoluciones, se programó las validaciones e interactividad de todas las pantallas.</p><p>Desarrollo BackEnd:</p><p>Se creo un tema personalizado para wordpress y se montó el sitio sobre dicha solución, con ello fue posible administrar varias secciones importantes en muy corto tiempo.</p>",
+			"compatibilidad":"Chrome - Firefox - IE8+.",
+			"tecnologias": "PHP - Wordpress - HTML5 - CSS3 - Javascript."
 		}
 	},
 	"Groupon Pasarela Payme":{
