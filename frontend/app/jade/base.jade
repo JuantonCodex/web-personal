@@ -1,3 +1,5 @@
+include ./config.jade
+
 mixin ie_condition(condition)
 	| <!--[!{condition}]>
 	block
@@ -17,15 +19,15 @@ doctype html
 html( lang="es" )
 	head
 		meta( charset="utf-8")
-		meta( name="viewport", content="initial-scale=1, maximum-scale=1, width=device-width" )
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
 		title #{page_title}
 		meta( name="description", content="#{page_description}" )
 		meta(property='og:title', content='#{page_title}')
-		meta(property='og:image', content='http://juancahuana.com/img/img-facebook.jpg')
+		meta(property='og:image', content='#{site_url}/img/img-facebook.jpg')
 		meta(property='og:site_name', content='Juan Cahuana - Página personal')
 		meta(property='og:description', content="#{page_description}")
 		
-		include ./includes/favicon.jade
+		include ./includes/_favicon.jade
 		
 		block _cssfiles_
 			link( rel="stylesheet", href="css/home.min.css")
@@ -35,32 +37,17 @@ html( lang="es" )
 		| <script src="//load.sumome.com/" data-sumo-site-id="ecf78bc6114fd994f5b6a872d8ca717e204a8bb3eca5608b4b768f9ca13f65a6" async="async"></script>
 	body
 		block _fbscript_
-		include ./includes/tracking/gtm.html
+		include ./includes/_gtm.jade
 		div.fullscreen-viewport
 			div.fullscreen
 				img(src="img/bg-world.jpg")
 		div#outer-wrapper
-			header#header
-				.header-inner
-					div#logo
-						a( href="/" ): img( src="img/juan-cahuana.png", alt="Juan Cahuana - Desarrollador FrontEnd" )
-					div#btn-menu
-					nav#nav
-						div.arrow.icon-arrow-up
-						ul
-							li(class="#{btn_home}")
-								a( href="/") Home
-							li(class="#{btn_perfil}")
-								a( href="perfil.html") Perfil
-							li(class="#{btn_portafolio}")
-								a( href="portafolio.html") Portafolio
-							li(class="#{btn_contacto}")
-								a( href="contacto.html") Contacto
+			include ./modules/header.jade
 			div#main
 				.main-inner
 					block _contenido_
           
-			include ./includes/footer.jade
+			include ./modules/footer.jade
 		
 		block _plantillas_
 		block _jsfiles_
