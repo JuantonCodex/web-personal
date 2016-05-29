@@ -1,59 +1,68 @@
-#header
-	background transparent url(../img/bg-header.jpg) 0 0 repeat
+.Header
+	background #fff url(../img/bg-header.jpg) 0 0 repeat
 	border-bottom 5px solid #3EA4FF
-	min-height 85px
+	min-height 50px
 	padding 0 15px
-	overflow hidden
+	box-sizing border-box
+	position fixed
+	z-index 999
+	top 0
+	left 0
+	width 100%
 	@media mw790
 		padding 0
-		border-bottom 0
+		height 55px
 	.header-inner
 		margin 0 auto
 		max-width 1000px
 		#logo
 			float left
-			width 208px
 			width 25%
 			box-sizing border-box
-			padding-right 20px
-			height 85px
-			line-height 85px
+			height 50px
+			padding 5px 0 5px 70px
+			line-height 50px
 			vertical-align middle
-			@media mw790
+			@media minw790
 				height 60px
 				line-height 60px
-				text-align center
-				margin 0 auto
-				width 100%
-				float none
+				padding 5px 0
+			a
+				display block
+				height 100%
 			img
-				width 100%
+				width auto
+				height 100%
 				max-width 208px
 				display inline-block
-				vertical-align middle
 				@media mw790
 					max-height 50px
 					width auto
 		#btn-menu
-			background #3ea4ff
+			background #3EA4FF
 			cursor pointer
 			display none
-			margin-top 5px
-			height 40px
+			height 50px
 			text-align center
+			width 60px
+			position absolute
+			top 0
+			left 0
 			&:before
 				content: "\e600";
-				color #06447B
+				color #3b5063
 				font 28px icomoon
-				line-height 40px
+				line-height 48px
 			@media mw790
 				display block
 		#nav
+			background transparent url(../img/bg-header.jpg) 0 0 repeat
 			float right
-			height 85px
+			height 60px
 			position relative
 			width 75%
 			@media mw790
+				top 5px
 				display none
 				height 145px
 				margin 0
@@ -61,7 +70,7 @@
 				width 100%
 				float none
 			.arrow
-				top 69px
+				top 42px
 				position absolute
 				left 0
 				width 25px

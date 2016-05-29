@@ -1,0 +1,64 @@
+.SlideHome
+  margin-bottom 35px
+  position relative
+  .rslides_nav
+    border 3px solid #fff
+    border-radius 50%
+    display block
+    color #fff
+    font-family: 'icomoon';
+    font-size 38px
+    height 50px
+    line-height 50px
+    position absolute
+    transition color 0.4s ease, border 0.4s ease
+    text-align center
+    text-decoration none
+    width 50px
+    z-index 2
+    &:hover
+      border 3px solid #FD9E00
+      color #FD9E00
+    &.next
+      box-shadow 1px 1px 2px #888888
+      margin-top -25px
+      top 50%
+      right 15px
+      &:before
+        content: "\e609";
+    &.prev
+      box-shadow -1px 1px 1px #888888
+      margin-top -25px
+      left 15px
+      top 50%
+      &:before
+        content: "\e608";
+  ul.rslides_tabs
+    list-style none
+    padding 15px 0
+    margin 0 auto
+    text-align center
+    li
+      background #999999
+      opacity 0.8
+      display inline-block
+      margin 0 5px
+      border-radius 50%
+      width 20px
+      height 20px
+      border-radius 50%
+      box-shadow 2px 2px 2px #000
+      &:hover
+        background #FD9E00
+        opacity 1
+      &.rslides_here
+        background #FD9E00
+        opacity 1
+      a
+        display block
+        height 0
+        overflow hidden
+        padding-top 20px
+        outline 0
+        &:active
+          outline 0

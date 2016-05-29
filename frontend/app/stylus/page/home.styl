@@ -1,0 +1,55 @@
+#main
+	padding 0 15px
+	@media mw610
+		padding 0 10px
+	.main-inner
+		margin 0 auto
+		max-width 1000px
+		padding 25px 0 0 0
+
+		.LogosClientes
+			overflow hidden
+			position relative
+			h1
+				color #fff
+				font 24px bitterregular
+				line-height: 29px
+				text-shadow 2px 2px 2px #000000
+				margin 0 0 30px 0
+				@media mw450
+					font-size 20px
+			.sprite-explosion
+				background transparent url(../img/efecto-explosion.png) left center
+				display none
+				height 90px
+				position absolute
+				width 94px
+				animation playexplosion .5s steps(10) infinite
+				top 0
+				left 0
+				z-index 4
+				margin-left -47px
+			@keyframes playexplosion
+				100%
+					background-position -940px
+			.lista-clientes
+				.cliente
+					float left
+					height 90px
+					margin-bottom 20px
+					width 25%
+					position relative
+					.wrapper-img
+						display table
+						margin 0 auto
+						position relative
+						img
+							cursor pointer
+							margin 0 auto
+							width 100%
+					@media mw790
+						width 50%
+						height auto
+						img
+							width 100%
+							height auto

@@ -1,8 +1,6 @@
 body
 	background #323232
 #main
-	//padding 0 15px
-	padding 0
 	#btn-descargar-cv
 		background #696969 url(../img/ico-download-cv.png) 130px 8px no-repeat
 		font 17px titillium_websemibold
@@ -27,6 +25,8 @@ body
 		width auto
 		.section
 			padding 50px 15px 50px 15px
+			&:first-child
+				padding-top 25px
 			@media mw610
 				padding-left 10px
 				padding-right 10px
@@ -39,7 +39,7 @@ body
 				position relative
 				h2
 					color #D87C72
-					font 24px bitterregular
+					font 23px bitterregular
 					text-shadow 2px 2px 2px #000000
 					margin 0 0 30px 0
 				div.lista-habilidades
@@ -54,7 +54,7 @@ body
 						div.nombre
 							color #DDDDDD
 							float left
-							font 18px bitterregular
+							font 17px bitterregular
 							line-height 25px
 							width 30%
 							margin-right 3%
@@ -78,13 +78,12 @@ body
 						span
 							color #DDDDDD
 							display block
-							font 18px bitterregular
+							font 17px bitterregular
 							margin-bottom 3px
 						a
 							color #3EA4FF
 							text-decoration none
-							font 18px bitteritalic
-							font-style italic
+							font 17px bitteritalic
 						div.fecha
 							float left
 							width 30%
@@ -99,13 +98,14 @@ body
 						span
 							color #DDDDDD
 							display block
-							font 18px bitterregular
+							font 17px bitterregular
 							margin-bottom 3px
 						a
 							color #3EA4FF
 							text-decoration none
-							font 18px bitteritalic
-							font-style italic
+							font 17px bitteritalic
+							&:hover
+								color #fd9e00
 						div.fecha
 							float left
 							width 30%

@@ -1,15 +1,10 @@
 mw905 = "only screen and (max-width: 905px)"
 mw790 = "only screen and (max-width: 790px)"
+minw790 = "only screen and (min-width: 790px)"
 mw610 = "only screen and (max-width: 610px)"
 mw550 = "only screen and (max-width: 550px)"
 mw450 = "only screen and (max-width: 450px)"
 colorTexto = #DDDDDD
-
-@import "./vendor/devicons"
-@import "./vendor/icomoon"
-@import "./modules/publicidad"
-@import "./layout/header"
-@import "./layout/footer"
 
 img
 	display block
@@ -40,3 +35,6 @@ body
 	z-index 2
 	height 100%
 	width 100%
+	padding-top 50px
+	@media minw790
+		padding-top 65px
