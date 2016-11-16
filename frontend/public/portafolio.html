@@ -23,7 +23,7 @@
         <div class="progress"></div>
       </div></script><script id="trabajo-template" type="text/x-handlebars-template"><div class="wrapper-slide">
         <div class="slide">
-          <ul class="rslides">{{#each imagenes_slide}}
+          <ul class="slide-list">{{#each imagenes_slide}}
             <li><img src="{{url}}"></li>{{/each}}
           </ul>
         </div>
@@ -39,7 +39,7 @@
         <p>{{compatibilidad}}</p>
         <p class="tag">Tecnologías:</p>
         <p>{{tecnologias}}</p>{{#if url_online}}
-        <p class="tag">Ver Online: <a href="{{url_online}}" target="_blank">{{url_online}}</a></p>{{/if}}
+        <p class="tag">URL Proyecto: <a href="{{url_online}}" target="_blank">{{url_online}}</a></p>{{/if}}
         {{#if url_repo}}
-        <p class="tag">URL Repositorio: <a href="{{url_repo}}" target="_blank">Gitlab</a></p>{{/if}}
+        <p class="tag">Repositorio: <a href="{{url_repo}}" target="_blank">visitar</a></p>{{/if}}
       </div></script><script src="js/portafolio.min.js"></script></body></html>

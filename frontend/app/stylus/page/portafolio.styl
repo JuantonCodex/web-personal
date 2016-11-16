@@ -115,56 +115,41 @@ body
 					@media mw790
 						width 100%
 						float none
-					.slide
+          .slide
 						width 100%
 						position relative
-						ul.rslides
-							overflow hidden
-							margin 0
+						.slide-list
 							padding 0
-							list-style none
-							width 100%
-							li
-								background #595959
-								padding 2%
-								width 96%
-								@media mw790
-									padding 1.5%
-									width 97%
-								img
-									width 100%
-					ul.rslides_tabs
-						list-style none
-						padding 10px 0 20px 0
-						margin 0 auto
-						text-align center
-						overflow hidden
-						position relative
-						z-index 2
-						li
-							background #999999
-							opacity 0.8
-							display block
-							float left
-							margin-right 15px
-							border-radius 50%
-							width 20px
-							height 20px
-							border-radius 50%
-							box-shadow 2px 2px 2px #000
-							&:hover
-								background #FD9E00
-								opacity 1
-							&.rslides_here
-								background #FD9E00
-								opacity 1
-							a
-								display block
-								height 0
-								overflow hidden
-								padding-top 20px
-								&:focus
-									outline 0
+							margin 0
+							img
+								width 100%
+						.slick-dots
+							position relative
+							margin-top 10px
+							margin-bottom 30px
+							bottom 0
+						.slick-prev, .slick-next
+							height 37px
+							width 35px
+						.slick-prev
+							z-index 2
+							left 5px
+						.slick-next
+							z-index 2
+							right 5px
+						.slick-prev:before, .slick-next:before
+							opacity 1
+							color #b9c7cd
+							font-size 35px
+							text-shadow 0.5px 0.5px 2px #4c5d65
+						.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before
+							opacity 0.25
+						.slick-dots li button:before
+							font-size 15px
+						.slick-dots li.slick-active button:before
+							opacity 1
+							color #b9c7cd
+
 				.descripcion
 					width 48%
 					float left

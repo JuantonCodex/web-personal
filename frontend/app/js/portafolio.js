@@ -1,6 +1,5 @@
 jQuery = $ = require('../components/jquery/dist/jquery');
-require('../components/ResponsiveSlides/responsiveslides');
-require('../components/spritely/src/jquery.spritely');
+require('../components/slick-carousel/slick/slick.min');
 
 var Backbone = require('backbone'),
 	PortafolioRouter = require('./routers/portafolio');
@@ -13,15 +12,19 @@ $(function(){
 	Backbone.Portafolio = {
 		animacionProgress : false,
 		fnSlide: function(){
-
-			$(".rslides").responsiveSlides({
+			/*$(".rslides").responsiveSlides({
 				nav: false,
 				pagination: true,
 				pager: true
-			});
+			});*/
+
+      $(".slide-list").slick({
+        dots: true,
+				infinite: false
+      });
 
 			//Centrado la navegación
-			var slide = $('.rslides_tabs');
+			/*var slide = $('.rslides_tabs');
 			var numBotones = slide.children().length;
 			var anchoBoton = slide.children('li:first-child').outerWidth(true);
 
@@ -32,11 +35,11 @@ $(function(){
 			alinearBotones();
 			$(window).on('resize', function(){
 				alinearBotones();
-			});
+			});*/
 		},
 		fnAnimacionProgress: function(){
 
-			self = this;
+			/*self = this;
 
 			if(self.animacionProgress === true){
 				$('.progress').destroy();
@@ -46,7 +49,7 @@ $(function(){
 				fps: 8,
 				no_of_frames: 8
 			});
-			self.animacionProgress = true;
+			self.animacionProgress = true;*/
 		}
 	};
 

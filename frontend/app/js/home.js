@@ -1,5 +1,5 @@
 jQuery = $ = require('../components/jquery/dist/jquery');
-require('../components/ResponsiveSlides/responsiveslides');
+require('../components/slick-carousel/slick/slick.min');
 
 var Backbone = require('backbone'),
 	HomeRouter = require('./routers/home');
@@ -18,11 +18,9 @@ $(function(){
 		},
 		fnSlide: function(){
 
-			$(".rslides").responsiveSlides({
-				nav: false,
-				pagination: true,
-					pager: true
-			});
+			$(".slide-list").slick({
+        dots: true
+      });
 
 		},
 		fnEfectoExplosion: function(e){
