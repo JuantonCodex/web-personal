@@ -117,7 +117,9 @@ module.exports = Backbone.Router.extend({
 			imagenes_slide: listaImagenes,
 			texto: trabajo.detalle.texto,
 			compatibilidad: trabajo.detalle.compatibilidad,
-			tecnologias: trabajo.detalle.tecnologias
+			tecnologias: trabajo.detalle.tecnologias,
+			url_repo: trabajo.detalle.url_repo,
+			url_online: trabajo.detalle.ver_online
 		}));
 
 		Backbone.Portafolio.fnSlide();

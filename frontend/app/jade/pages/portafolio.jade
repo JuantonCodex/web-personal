@@ -55,9 +55,16 @@ block _plantillas_
 			div.share-button
 				div(class="fb-share-button", data-href="http://juancahuana.com/portafolio.html#{{{url}}}", data-layout="button_count", data-mobile-iframe="true")
 			div.texto {{{texto}}}
-			p.compatibilidad Compatibilidad:
+			p.tag Compatibilidad:
 			p {{compatibilidad}}
-			p.tecnologia Tecnologías:
+			p.tag Tecnologías:
 			p {{tecnologias}}
+			| {{#if url_online}}
+			p.tag Ver Online: <a href="{{url_online}}" target="_blank">{{url_online}}</a>
+			| {{/if}}
+			| {{#if url_repo}}
+			p.tag URL Repositorio: <a href="{{url_repo}}" target="_blank">Gitlab</a>
+			| {{/if}}
+			
 block _jsfiles_
 	script( src="js/portafolio.min.js")

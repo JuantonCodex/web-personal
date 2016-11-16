@@ -1,0 +1,20 @@
+{
+  "Juego Pedalea":{
+		"url": "kia-juego-pedalea",
+		"categoria":"Game App",
+		"img_portada":"photos/portafolio/kia-juegopedalea-portada.jpg",
+		"estado": "progress",
+		"id": 12,
+		"img_slide":[
+			"photos/portafolio/slide-1.jpg",
+			"photos/portafolio/slide-1.jpg",
+			"photos/portafolio/slide-1.jpg"
+		],
+		"detalle":{
+			"texto":"<p>Sitio web para el lanzamiento de el nuevo Kia Cerato 2014.</p><p>En la primera sección el sitio web muestra la oferta del auto y la actividad en redes sociales como Twitter y Facebook.</p><p>En la segunda sección el sitio web te da a escoger tres videos(la temática es sobre deportes de aventura) que te invitan a participar mediante una pregunta, si la respuesta es afirmativa el sitio web se conecta a la API de facebook para registrar la usuario y luego te da la posibilidad de publicar una imagen en nuestros muros.</p><p>Cada vez que el usuario contesta de manera afirmativa laspreguntas en cada video, una mensahe y una imagen del video respectivo es publicado en su muro de facebook.</p>",
+			"compatibilidad":"IE8+ / Chrome / Firefox.",
+			"tecnologias": "HTML5 - MySQL - Facebook API.",
+			"ver_online": ""
+		}
+	}
+}

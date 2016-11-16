@@ -144,7 +144,7 @@ gulp.task('png', function(){
 
 gulp.task('photos', function(){
 	var imgDst = './public/photos';
-	gulp.src('./app/photos/**/*.png')
+	gulp.src('./app/photos/**/*.jpg')
 		.pipe(changed(imgDst))
 		// .pipe(imagemin())
 		.pipe(tinypng('CHD9zVb-3FcqW3C0kzIX_fR3L-UArybO'))

@@ -35,8 +35,11 @@
           <div data-href="http://juancahuana.com/portafolio.html#{{{url}}}" data-layout="button_count" data-mobile-iframe="true" class="fb-share-button"></div>
         </div>
         <div class="texto">{{{texto}}}</div>
-        <p class="compatibilidad">Compatibilidad:</p>
+        <p class="tag">Compatibilidad:</p>
         <p>{{compatibilidad}}</p>
-        <p class="tecnologia">Tecnologías:</p>
-        <p>{{tecnologias}}</p>
+        <p class="tag">Tecnologías:</p>
+        <p>{{tecnologias}}</p>{{#if url_online}}
+        <p class="tag">Ver Online: <a href="{{url_online}}" target="_blank">{{url_online}}</a></p>{{/if}}
+        {{#if url_repo}}
+        <p class="tag">URL Repositorio: <a href="{{url_repo}}" target="_blank">Gitlab</a></p>{{/if}}
       </div></script><script src="js/portafolio.min.js"></script></body></html>

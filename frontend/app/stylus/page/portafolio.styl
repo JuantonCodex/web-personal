@@ -24,7 +24,7 @@ body
 	.main-inner
 		margin 0 auto
 		max-width 1000px
-		padding 25px 0 0 0
+		padding 35px 0 0 0
 		@media mw610
 			padding-top 25px
 		#portafolio
@@ -109,8 +109,8 @@ body
 			.trabajo
 				overflow hidden
 				.wrapper-slide
-					width 50%
-					margin-right 2%
+					width 49%
+					margin-right 3%
 					float left
 					@media mw790
 						width 100%
@@ -175,9 +175,11 @@ body
 						padding-bottom 10px
 					h1
 						color #FD9E00
-						font 24px bitterregular
+						font 30px bitterregular
 						margin 0 0 5px 0
 						padding 0
+						@media mw550
+							font-size 22px
 					h2
 						background transparent url(../img/sprite-icons-detalle-trabajo.png) 0 2px no-repeat
 						color #DC8A81
@@ -189,6 +191,18 @@ body
 						font 15px titillium_webregular
 						line-height 22px
 						margin 0 0 10px 0
+						&.tag
+							color #DC8A81
+							font 15px titillium_webregular
+							margin-top 20px
+							padding 0
+							margin-bottom 0px
+							a
+								color #3ea4ff
+								text-decoration none
+								&:hover
+									color #fd9e00
+									text-decoration underline
 						&.compatibilidad
 							background transparent url(../img/sprite-icons-detalle-trabajo.png) 0 -23px no-repeat
 							color #DC8A81
