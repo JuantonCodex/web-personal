@@ -19,12 +19,23 @@ block _fbscript_
 block _contenido_
 	section#portafolio
 		div.loader
-			img(src="img/content-loader.gif", alt="")
+			img(src="img/loader.gif", alt="")
 	div#btn-portafolio-behance
 		a( href="http://www.behance.net/jcahuana", target="_blank" ) Ver en Behance
 		
 block _plantillas_
-	script( id="portada-template", type="text/x-handlebars-template" )
+
+	//- Proyecto que se encuentra en progreso
+	script( id="portada-progress-template", type="x-tmpl-mustache" )
+		div.imagen
+			div.viewport
+				img( src="{{imagen_portada}}" )
+		div.nombre
+			h2 {{nombre}}
+			div.progress
+
+	//- Presentación de proyecto (mustache)
+	script( id="portada-template-mst", type="x-tmpl-mustache" )
 		- var url_proyecto = "#{{url}}";
 		div.imagen
 			div.viewport
@@ -33,22 +44,17 @@ block _plantillas_
 					img( src="{{imagen_portada}}" )
 		div.nombre
 			h2 {{nombre}}
+			span.categoria {{categoria}}
 
-	script( id="portada-progress-template", type="text/x-handlebars-template" )
-		div.imagen
-			div.viewport
-				img( src="{{imagen_portada}}" )
-		div.nombre
-			h2 {{nombre}}
-			div.progress
-
-	script( id="trabajo-template", type="text/x-handlebars-template" )
+	//- Detalle de proyecto
+	//- script( id="trabajo-template", type="text/x-handlebars-template" )
+	script( id="trabajo-template", type="x-tmpl-mustache" )
 		div.wrapper-slide
 			div.slide
 				ul.slide-list
-					| {{#each imagenes_slide}}
+					| {{#imagenes_slide}}
 					li: img( src="{{url}}" )
-					| {{/each}}
+					| {{/imagenes_slide}}
 		div.descripcion
 			h1 {{titulo}}
 			h2 {{categoria}}
@@ -59,12 +65,12 @@ block _plantillas_
 			p {{compatibilidad}}
 			p.tag Tecnologías:
 			p {{tecnologias}}
-			| {{#if url_online}}
+			| {{#url_online}}
 			p.tag URL Proyecto: <a href="{{url_online}}" target="_blank">{{url_online}}</a>
-			| {{/if}}
-			| {{#if url_repo}}
+			| {{/url_online}}
+			| {{#url_repo}}
 			p.tag Repositorio: <a href="{{url_repo}}" target="_blank">visitar</a>
-			| {{/if}}
+			| {{/url_repo}}
 			
 block _jsfiles_
 	script( src="js/portafolio.min.js")

@@ -75,7 +75,7 @@
       <div id="main">
         <div class="main-inner">
           <section id="portafolio">
-            <div class="loader"><img src="img/content-loader.gif" alt=""></div>
+            <div class="loader"><img src="img/loader.gif" alt=""></div>
           </section>
           <div id="btn-portafolio-behance"><a href="http://www.behance.net/jcahuana" target="_blank">Ver en Behance</a></div>
         </div>
@@ -130,16 +130,7 @@
         </div>
       </footer>
     </div>
-    <script id="portada-template" type="text/x-handlebars-template">
-      <div class="imagen">
-        <div class="viewport"><a href="portafolio.html#{{url}}">
-            <div class="icon-portafolio-link-work"></div><img src="{{imagen_portada}}"></a></div>
-      </div>
-      <div class="nombre">
-        <h2>{{nombre}}</h2>
-      </div>
-    </script>
-    <script id="portada-progress-template" type="text/x-handlebars-template">
+    <script id="portada-progress-template" type="x-tmpl-mustache">
       <div class="imagen">
         <div class="viewport"><img src="{{imagen_portada}}"></div>
       </div>
@@ -148,11 +139,20 @@
         <div class="progress"></div>
       </div>
     </script>
-    <script id="trabajo-template" type="text/x-handlebars-template">
+    <script id="portada-template-mst" type="x-tmpl-mustache">
+      <div class="imagen">
+        <div class="viewport"><a href="portafolio.html#{{url}}">
+            <div class="icon-portafolio-link-work"></div><img src="{{imagen_portada}}"></a></div>
+      </div>
+      <div class="nombre">
+        <h2>{{nombre}}</h2><span class="categoria">{{categoria}}</span>
+      </div>
+    </script>
+    <script id="trabajo-template" type="x-tmpl-mustache">
       <div class="wrapper-slide">
         <div class="slide">
-          <ul class="slide-list">{{#each imagenes_slide}}
-            <li><img src="{{url}}"></li>{{/each}}
+          <ul class="slide-list">{{#imagenes_slide}}
+            <li><img src="{{url}}"></li>{{/imagenes_slide}}
           </ul>
         </div>
       </div>
@@ -166,10 +166,10 @@
         <p class="tag">Compatibilidad:</p>
         <p>{{compatibilidad}}</p>
         <p class="tag">Tecnologías:</p>
-        <p>{{tecnologias}}</p>{{#if url_online}}
-        <p class="tag">URL Proyecto: <a href="{{url_online}}" target="_blank">{{url_online}}</a></p>{{/if}}
-        {{#if url_repo}}
-        <p class="tag">Repositorio: <a href="{{url_repo}}" target="_blank">visitar</a></p>{{/if}}
+        <p>{{tecnologias}}</p>{{#url_online}}
+        <p class="tag">URL Proyecto: <a href="{{url_online}}" target="_blank">{{url_online}}</a></p>{{/url_online}}
+        {{#url_repo}}
+        <p class="tag">Repositorio: <a href="{{url_repo}}" target="_blank">visitar</a></p>{{/url_repo}}
       </div>
     </script>
     <script src="js/portafolio.min.js"></script>
