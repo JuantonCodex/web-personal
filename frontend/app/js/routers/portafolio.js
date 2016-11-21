@@ -78,7 +78,8 @@ module.exports = Backbone.Router.extend({
 			nombre: name,
 			url: data.url,
 			imagen_portada: data.img_portada,
-			estado: data.estado
+			estado: data.estado,
+			categoria: data.categoria
 		}));
 		this.contadorProyectos++;
 		if(this.contadorProyectos == this.totalProyectos){

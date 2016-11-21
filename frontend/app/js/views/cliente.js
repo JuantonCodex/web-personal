@@ -1,23 +1,24 @@
 var Backbone = require('backbone'),
-	$ = require('jquery');
-	Handlebars = require('handlebars'),
-	Handlebars = Handlebars.Handlebars;
-
+	$ = require('jquery'),
+	Mustache = require('mustache.js');
+	
 module.exports = Backbone.View.extend({
 	className: 'cliente',
 	events: {
 		'click .wrapper-img': 'explosion'
 	},
 
-	template: Handlebars.compile($("#cliente-template").html()),
+	template_mst: $('#cliente-template').html(),
+
 	initialize: function(){
 		this.listenTo(this.model, 'change', this.render, this);
 	},
 
 	render: function(){
 		var cliente = this.model.toJSON();
-		var html = this.template(cliente);
-		this.$el.html(html);
+		var html_rendered = Mustache.render(this.template_mst, cliente);
+
+		this.$el.html(html_rendered);
 		return this;
 	},
 

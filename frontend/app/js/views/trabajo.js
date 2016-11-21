@@ -1,12 +1,11 @@
 var Backbone = require('backbone'),
-	$ = require('jquery');
-	Handlebars = require('handlebars'),
-	Handlebars = Handlebars.Handlebars;
+	$ = require('jquery'),
+	Mustache = require('mustache.js');
 
 module.exports = Backbone.View.extend({
 	className: 'trabajo',
 	
-	template: Handlebars.compile($('#trabajo-template').html()),
+	template: $('#trabajo-template').html(),
 
 	initialize: function(){
 		this.listenTo(this.model, "change", this.render, this);
@@ -14,8 +13,8 @@ module.exports = Backbone.View.extend({
 
 	render: function(){
 		var trabajo = this.model.toJSON();
-		var html = this.template(trabajo);
-		this.$el.html(html);
+		var html_rendered = Mustache.render(this.template, trabajo);
+		this.$el.html(html_rendered);
 		return this;
 	}
 });

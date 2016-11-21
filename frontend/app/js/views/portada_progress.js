@@ -1,12 +1,11 @@
 var Backbone = require('backbone'),
-	$ = require('jquery');
-	Handlebars = require('handlebars'),
-	Handlebars = Handlebars.Handlebars;
+	$ = require('jquery'),
+	Mustache = require('mustache.js');
 
 module.exports = Backbone.View.extend({
 	className: 'work',
 
-	template: Handlebars.compile($('#portada-progress-template').html()),
+	template: $('#portada-progress-template').html(),
 
 	initialize: function(){
 		this.listenTo(this.model, "change", this.render, this);
@@ -14,8 +13,9 @@ module.exports = Backbone.View.extend({
 
 	render: function(){
 		var portada = this.model.toJSON();
-		var html = this.template(portada);
-		this.$el.html(html);
+		var html_rendered = Mustache.render(this.template, portada);
+
+		this.$el.html(html_rendered);
 		return this;
 	}
 });
