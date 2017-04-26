@@ -1,24 +1,9 @@
-[class^="icon-portafolio"], [class*=" icon-portafolio"] {
-	font-family: 'icomoon-portafolio';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-portafolio-link-work:before {
-	content: "\e600";
-}
 body
 	background #323232
 #main
+	font-family ff_main
 	padding 0 15px
+	padding-bottom 50px
 	@media mw610
 		padding 0 10px
 	.main-inner
@@ -55,7 +40,8 @@ body
 					h2
 						color #DDDDDD
 						margin 0
-						font 16px bitterregular
+						font-size 16px
+						font-weight fw_medium
 						text-shadow 2px 2px 1px #000
 						padding 5px 0 0 0
 						text-align center
@@ -68,7 +54,7 @@ body
 						border-radius 4px
 						text-shadow none
 						color #ddd
-						font 12px bitterregular
+						font-size 12px
 						text-align center
 
 					.progress
@@ -92,11 +78,11 @@ body
 							width 100%
 							.icon-portafolio-link-work
 								transition .5s
-								opacity 0.3
+								opacity 0.5
 							&:hover
 								.icon-portafolio-link-work
-									transition .5s
-									opacity 0.7
+									transition .9s
+									opacity 0.9
 								img
 									transition .5s
 									transform scale(1.1)
@@ -172,26 +158,28 @@ body
 					.share-button
 						padding-bottom 10px
 					h1
-						color #FD9E00
-						font 30px bitterregular
+						color #d87c72
+						font-size 26px
+						font-weight fw_medium
 						margin 0 0 5px 0
 						padding 0
 						@media mw550
 							font-size 22px
 					h2
-						background transparent url(../img/sprite-icons-detalle-trabajo.png) 0 2px no-repeat
-						color #DC8A81
-						font 15px titillium_webregular
-						margin 0 0 15px 0
-						padding 0 0 0 23px
+						color #d87c72
+						font-size 16px
+						font-weight fw_medium
+						min-height 25px
+						margin 5px 0 15px 0
+						i
+							margin-right 5px
 					p
 						color #DDDDDD
-						font 15px titillium_webregular
-						line-height 22px
+						font-size 14px
+						line-height 1.4
 						margin 0 0 10px 0
 						&.tag
-							color #DC8A81
-							font 15px titillium_webregular
+							color #d87c72
 							margin-top 20px
 							padding 0
 							margin-bottom 0px
@@ -201,23 +189,12 @@ body
 								&:hover
 									color #fd9e00
 									text-decoration underline
-						&.compatibilidad
-							background transparent url(../img/sprite-icons-detalle-trabajo.png) 0 -23px no-repeat
-							color #DC8A81
-							font 15px titillium_webregular
-							margin-top 20px
-							padding 0 0 0 23px
-							margin-bottom 0px
-						&.tecnologia
-							background transparent url(../img/sprite-icons-detalle-trabajo.png) 0 -48px no-repeat
-							color #DC8A81
-							font 15px titillium_webregular
-							margin-top 20px
-							padding 0 0 0 23px
-							margin-bottom 0px
+
+		// BOTÓN BEHA
 		#btn-portafolio-behance
 			background #696969 url(../img/ico-portafolio-behance.png) 145px 6px no-repeat
-			font 17px titillium_websemibold
+			font-size 16px
+			font-weight fw_medium
 			height 35px
 			padding-left 10px
 			line-height 35px

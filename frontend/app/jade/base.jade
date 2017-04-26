@@ -19,6 +19,10 @@ doctype html
 html( lang="es" )
 	head
 		meta( charset="utf-8")
+		include ./includes/_hiding_snippet.jade			
+		include ./includes/_google_optimize.jade			
+		include ./includes/_google_tag_manager_head.jade			
+
 		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
 		title #{page_title}
 		meta( name="description", content="#{page_description}" )
@@ -27,6 +31,7 @@ html( lang="es" )
 		meta(property='og:image', content='#{site_url}/img/img-facebook.jpg')
 		meta(property='og:site_name', content='Juan Cahuana - Página personal')
 		meta(property='og:description', content="#{page_description}")
+		| <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 		
 		include ./includes/_favicon.jade
 		
@@ -38,7 +43,7 @@ html( lang="es" )
 		| <script src="//load.sumome.com/" data-sumo-site-id="ecf78bc6114fd994f5b6a872d8ca717e204a8bb3eca5608b4b768f9ca13f65a6" async="async"></script>
 	body
 		block _fbscript_
-		include ./includes/_gtm.jade
+		include ./includes/_google_tag_manager_body.jade	
 		div.fullscreen-viewport
 			div.fullscreen
 				img(src="img/bg-world.jpg")

@@ -2,6 +2,39 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+    <!-- Page hiding snippet-->
+    <style>.async-hide { opacity: 0 !important}</style>
+    <script>
+      (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+      h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+      (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+      })(window,document.documentElement,'async-hide','dataLayer',4000,
+      {'GTM-P9TNZHV':true});
+    </script>
+    <!-- Google Optimize-->
+    <script>
+      (function(p,a,l,i,n,d,r,o,m,e){r={id:'GTM-P9TNZHV',l:'dataLayer',m:'sync'};
+      if(!r.gac){o=/;((__utma=)|([^;=]+=GAX?\\d+\.))[^;]*/g;m=l.cookie.replace(
+      /^|(; +)/g,';').match(o);if(m)r.gac=m.sort().join('').substring(1)};e=
+      'https://www.google-analytics.com/gtm/js?';r.m=='sync'||(p['event']='gtm.js');
+      for(d in r)if(r.hasOwnProperty(d))e+=n(d)+'='+n(r[d])+'&';a[r.l]=a[r.l]||[];
+      a[r.l].push(p);if(r.m=='sync'){l.write('<'+i+' src="'+e+'"><\\/'+i+'>');}else{
+      j=l.createElement(i);j.async=!0;j.src=e;f=l.getElementsByTagName(i)[0];
+      f.parentNode.insertBefore(j,f);}})({'gtm.start':1*new
+      Date()},window,document,'script',encodeURIComponent);
+    </script>
+    <noscript>
+      <iframe src="https://www.google-analytics.com/gtm/ns?id=GTM-P9TNZHV" style="display:none;visibility:hidden" height="0" width="0"></iframe>
+    </noscript>
+    <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PB9MV8');
+    </script>
+    <!-- End Google Tag Manager-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Juan Cahuana - Desarrolador Front-End</title>
     <meta name="description" content="Desarrollador web en Lima- Perú.">
@@ -9,7 +42,7 @@
     <meta property="og:title" content="Juan Cahuana - Desarrolador Front-End">
     <meta property="og:image" content="http://juancahuana.com/img/img-facebook.jpg">
     <meta property="og:site_name" content="Juan Cahuana - Página personal">
-    <meta property="og:description" content="Desarrollador web en Lima- Perú.">
+    <meta property="og:description" content="Desarrollador web en Lima- Perú."><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
@@ -41,18 +74,11 @@
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-    <!-- Google Tag Manager-->
+    <!-- Google Tag Manager (noscript)-->
     <noscript>
-      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PB9MV8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB9MV8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PB9MV8');
-    </script>
-    <!-- End Google Tag Manager-->
+    <!-- End Google Tag Manager (noscript)-->
     <div class="fullscreen-viewport">
       <div class="fullscreen"><img src="img/bg-world.jpg"></div>
     </div>
@@ -60,9 +86,9 @@
       <header class="Header">
         <div class="header-inner">
           <div id="logo"><a href="/"><img src="img/juan-cahuana.png" alt="Juan Cahuana - Desarrollador FrontEnd"></a></div>
-          <div id="btn-menu"></div>
+          <div id="btn-menu"><i class="fa fa-bars"></i></div>
           <nav id="nav">
-            <div class="arrow icon-arrow-up"></div>
+            <div class="arrow fa fa-caret-up"></div>
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="perfil.html">Perfil</a></li>
@@ -144,7 +170,7 @@
         </div>
         <div class="copyright">
           <div class="copyright-inner">
-            <p class="detalle">© 2016 Juan Cahuana</p>
+            <p class="detalle">© 2017 Juan Cahuana</p>
             <p class="celular"><span class="icon icon-mobile"></span> cel: 931836339</p>
             <p class="email"><span class="icon icon-mail"></span> e-mail: <a href="mailto:jcahuanam@gmail.com">jcahuanam@gmail.com</a></p>
           </div>

@@ -1,16 +1,32 @@
-mw905 = "only screen and (max-width: 905px)"
-mw790 = "only screen and (max-width: 790px)"
-minw790 = "only screen and (min-width: 790px)"
-mw610 = "only screen and (max-width: 610px)"
-mw550 = "only screen and (max-width: 550px)"
-mw450 = "only screen and (max-width: 450px)"
-colorTexto = #DDDDDD
+// Familias de fuentes
+ff_main    = "Ubuntu"
+ff_main_cn = "Roboto_Condensed"
+
+// Pesos para las fuentes
+fw_medium = 500
+fw_bold   = 700
+
+// Breakpoints
+mw905              = "only screen and (max-width: 905px)"
+mw790              = "only screen and (max-width: 790px)"
+minw790            = "only screen and (min-width: 790px)"
+mw610              = "only screen and (max-width: 610px)"
+mw550              = "only screen and (max-width: 550px)"
+mw450              = "only screen and (max-width: 450px)"
+colorTexto         = #DDDDDD
+c_enlace       = #3ea4ff
+c_enlace_hover = #fd9e00
 
 img
 	display block
 	border none
 *
 	outline none
+
+a
+	color c_enlace
+	&:hover
+		color c_enlace_hover
 
 body
 	background #202020

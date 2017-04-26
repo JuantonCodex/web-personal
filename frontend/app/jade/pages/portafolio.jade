@@ -41,6 +41,7 @@ block _plantillas_
 			div.viewport
 				a( href="portafolio.html#{url_proyecto}" )
 					div.icon-portafolio-link-work
+						i.fa.fa-link
 					img( src="{{imagen_portada}}" )
 		div.nombre
 			h2 {{nombre}}
@@ -57,7 +58,9 @@ block _plantillas_
 					| {{/imagenes_slide}}
 		div.descripcion
 			h1 {{titulo}}
-			h2 {{categoria}}
+			h2 
+				i.fa.fa-tag
+				{{categoria}}
 			div.share-button
 				div(class="fb-share-button", data-href="http://juancahuana.com/portafolio.html#{{{url}}}", data-layout="button_count", data-mobile-iframe="true")
 			div.texto {{{texto}}}

@@ -1,9 +1,12 @@
 body
 	background #323232
 #main
+	font-family ff_main
+	padding-bottom 50px
 	#btn-descargar-cv
 		background #696969 url(../img/ico-download-cv.png) 130px 8px no-repeat
-		font 17px titillium_websemibold
+		font-size 15px
+		font-weight fw_medium
 		height 35px
 		padding-left 10px
 		line-height 35px
@@ -39,7 +42,8 @@ body
 				position relative
 				h2
 					color #D87C72
-					font 23px bitterregular
+					font-size 23px
+					font-weight fw_medium
 					text-shadow 2px 2px 2px #000000
 					margin 0 0 30px 0
 				div.lista-habilidades
@@ -47,14 +51,14 @@ body
 						overflow hidden
 						margin-bottom 15px
 						i.devicons
-							font-size 27px
+							font-size 23px
 							float left
 							width 40px
 							text-align left
 						div.nombre
 							color #DDDDDD
 							float left
-							font 17px bitterregular
+							font-size 16px
 							line-height 25px
 							width 30%
 							margin-right 3%
@@ -78,17 +82,16 @@ body
 						span
 							color #DDDDDD
 							display block
-							font 17px bitterregular
+							font-size 16px
 							margin-bottom 3px
 							span.actual
 								display inline-block
 								margin-right 5px
-								font 15px bitterregular
+								font-size 14px
 								margin-bottom 0
 						a
-							color #3EA4FF
 							text-decoration none
-							font 17px bitteritalic
+							font-size 15px
 						div.fecha
 							float left
 							width 30%
@@ -96,6 +99,8 @@ body
 						div.lugar
 							float left
 							width 67%
+							.descripcion
+								font-size 15px
 				div.lista-educacion
 					div.grp-educacion
 						overflow hidden
@@ -103,12 +108,12 @@ body
 						span
 							color #DDDDDD
 							display block
-							font 17px bitterregular
+							font-size 16px
 							margin-bottom 3px
 						a
 							color #3EA4FF
 							text-decoration none
-							font 17px bitteritalic
+							font-size 15px
 							&:hover
 								color #fd9e00
 						div.fecha
@@ -118,6 +123,8 @@ body
 						div.lugar
 							float left
 							width 67%
+							.descripcion
+								font-size 15px
 		#habilidades
 			background #323232
 			.perfil-inner
@@ -161,30 +168,10 @@ body
 
 @media only screen and (max-width: 520px)
 	#main
-		div.lista-habilidades
-			div.grp-habilidad
-				div.nombre
-					font-size 16px !important
 		div.lista-experiencia
 			div.fecha
-				span
-					font-size 16px !important
 				span.actual
-					font 12px bitterregular !important
-			div.lugar
-				span
-					font-size 16px !important
-					a
-						font-size 16px !important
-		div.lista-educacion
-			div.fecha
-				span
-					font-size 16px !important
-			div.lugar
-				span
-					font-size 16px !important
-					a
-						font-size 16px !important
+					font-size 13px !important
 
 @media only screen and (max-width: 490px)
 	#main
@@ -194,21 +181,3 @@ body
 					width 50% !important
 				div.progress
 					width 47% !important
-
-@media only screen and (max-width: 400px)
-	#main
-		div.lista-habilidades
-			div.grp-habilidad
-				div.nombre
-					width 60% !important
-				div.progress
-					width 37% !important
-
-@media only screen and (max-width: 330px)
-	#main
-		div.lista-habilidades
-			div.grp-habilidad
-				div.nombre
-					width 65% !important
-				div.progress
-					width 32% !important
