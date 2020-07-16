@@ -1,7 +1,6 @@
-/node_modules
-/npm-debug.log
-/component.json
-/bower_components
-/app/components
-/.gulp
-wp-config.php
+.DS_Store
+/node_modules/
+/src/node_modules/@sapper/
+yarn-error.log
+/cypress/screenshots/
+/__sapper__/
