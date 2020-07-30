@@ -1,46 +1,46 @@
 {
-  "name": "jcahuana_bower",
+  "name": "personal-site",
   "version": "0.0.0",
-  "description": "Modelo de una página web personal",
-  "main": "sever.js",
-  "dependencies": {
-    "node-static": "^0.7.3"
-  },
   "scripts": {
-    "start": "node server.js"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
-  "browserify": {
-    "transform": [
-      "debowerify"
-    ]
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~10.0.5",
+    "@angular/common": "~10.0.5",
+    "@angular/compiler": "~10.0.5",
+    "@angular/core": "~10.0.5",
+    "@angular/forms": "~10.0.5",
+    "@angular/platform-browser": "~10.0.5",
+    "@angular/platform-browser-dynamic": "~10.0.5",
+    "@angular/router": "~10.0.5",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jcahuana/web-personal.git"
-  },
-  "keywords": [
-    "jcahuana",
-    "frontend"
-  ],
-  "author": "Juan Cahuana <jcahuanam@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/jcahuana/web-personal",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "browserify": "^4.1.8",
-    "debowerify": "^0.7.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^1.0.1",
-    "gulp-changed": "^0.4.0",
-    "gulp-clean-css": "^2.0.3",
-    "gulp-htmlmin": "^1.3.0",
-    "gulp-imagemin": "^0.6.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-streamify": "0.0.5",
-    "gulp-strip-debug": "^0.3.0",
-    "gulp-stylus": "^1.3.3",
-    "gulp-tinypng": "^1.0.2",
-    "gulp-uglify": "^0.3.0",
-    "vinyl-source-stream": "^0.1.1"
+    "@angular-devkit/build-angular": "~0.1000.4",
+    "@angular/cli": "~10.0.4",
+    "@angular/compiler-cli": "~10.0.5",
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^6.0.0",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~3.3.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.9.5"
   }
 }

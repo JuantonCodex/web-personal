@@ -1,29 +1,27 @@
-# web-personal
+# PersonalSite
 
-Estructura completa de mi sitio web personal. Contiene los archivos de desarrollo en app/ y los archivos de producción en public/
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 
-#### Requisitos:
-<ol>
-<li>Instalar Nodejs.</li>
-<li>Instalar Python 2.7 como mínimo.</li>
-<li>Instalar node-gyp: npm install -g node-gyp. (requisitos:  https://github.com/nodejs/node-gyp).</li>
-<li>Instalar Bower: npm install gulp -g (-g es para que se instale de manera global).</li>
-<li>Instalar Bower: npm install bower -g (-g es para que se instale de manera global).</li>
-</ol>
+## Development server
 
-#### Instalamos las dependencias:
-<ol>
-<li>Paquetes npm: npm install.</li>
-<li>Paquetes bower: bower install.</li>
-<li>Iniciar servidor web para el proyecto: npm start.</li>
-</ol>
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-#### Iniciar el servidor web
-Ejecutar el comando: gulp server. La carpeta que se muestra al iniciar el servidor se encuentra declara en el archivo Gulpfile.js en el task 'server'.
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Nota: Si deseas desinstalar todos los paquetes npm locales puedes usar el siguiente comando desde el Git Bash:
-npm uninstall `ls -1 node_modules | tr '/\n' ' '`
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Contacto: jcahuanam@gmail.com
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
